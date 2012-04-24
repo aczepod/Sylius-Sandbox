@@ -1,0 +1,15 @@
+category.create.title.create_category: 'Creating category.'
+category.create.title.create_category_description: 'Use the form below to create a new assortment category.'
+category.create.select.choose_category: 'choose category...'
+category.create.button.create_category: 'create category'
+category.list.title.list_categories: Categories.
+category.list.title.list_categories_description: Manage assortment categories.
+category.list.button.create_category: create category
+category.list.table.category_id: '#id'
+category.list.table.category_name: name
+category.list.button.list_products: list products
+category.list.button.update: update
+category.list.dialog.confirm_delete: delete
+category.list.button.delete: delete
+category.list.information.title: Information
+category.list.information.no_categories: There are no categories to display.

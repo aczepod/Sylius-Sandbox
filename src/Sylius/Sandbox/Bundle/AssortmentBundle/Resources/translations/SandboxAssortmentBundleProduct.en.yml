@@ -1,0 +1,49 @@
+show.title.show_product: 'Product details'
+show.button.show_in_store: 'show in the store'
+show.button.update: update
+show.dialog.product_confirm_delete: 'Are you sure you want to delete this product?'
+show.button.delete: delete
+show.table.product_id: '#id'
+show.table.product_name: name
+show.table.product_options: options
+show.table.product_price: price
+show.button.create_variant: 'create variant'
+show.table.variant_id: '#id'
+show.table.variant_creation_time: 'creation time'
+show.table.variant_option_set: 'option set'
+show.table.variant_price: price
+show.button.show: show
+show.dialog.variant_confirm_delete: 'Are you sure you want to delete this variant?'
+show.information.title: Information
+show.information.no_variants: 'There are no variants of this product.'
+show.table.properties: properties
+show.information.no_properties: 'There are no properties for this product'
+update.title.update_product: Updating product
+update.title.update_product_description: Use the form below to modify existing product
+update.select.choose_category: chooose category...
+update.button.add_property: add property
+update.button.save_changes: save changes
+list.title.list_products: Assortment
+list.title.list_products_description: 'List of all registered products in the store'
+list.button.create_product: 'create product'
+list.button.show_deleted_products: 'show deleted products'
+list.button.hide_deleted_products: 'hide deleted products'
+list.table.product_id: '#id'
+list.table.product_sku: SKU
+list.table.product_name: name
+list.table.product_category: category
+list.table.product_updated_at: 'updated at'
+list.button.list_variants: 'list variants'
+list.button.show: show
+list.button.update: update
+list.button.duplicate: duplicate
+list.dialog.product_confirm_delete: 'Are you sure you want to delete this product?'
+list.button.delete: delete
+list.label.deleted: deleted
+list.information.title: Information
+list.information.no_products: 'There are no products to display.'
+create.title.create_product: 'Creating product'
+create.title.create_product_description: 'Use the form below to create a new product'
+create.select.choose_category: 'choose category...'
+create.button.add_property: 'add property'
+create.button.create_product: 'create product'

@@ -1,7 +1,7 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
 {% block header %}
-    <h1>Creating product<small> Use the form below to create a new product</small></h1>
+    <h1>{{ 'create.title.create_product'|trans({}, 'SandboxAssortmentBundleProduct') }}<small> {{ 'create.title.create_product_description'|trans({}, 'SandboxAssortmentBundleProduct') }}</small></h1>
 {% endblock %}
 
 {% block content %}
@@ -50,7 +50,7 @@
 </fieldset>
     {{ form_widget(form._token) }}
     <div class="form-actions">
-       <input type="submit" value="create product" class="btn btn-primary btn-large" />
+       <input type="submit" value="{{ 'create.button.create_product'|trans({}, 'SandboxAssortmentBundleProduct') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

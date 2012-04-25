@@ -3,21 +3,21 @@
 {% import 'SandboxAssortmentBundle:Backend/Product:macros.html.twig' as macros %}
 
 {% block header %}
-    <h1>Assortment<small> List of all registered products in Sylius store</small></h1>
+    <h1>{{ 'list.title.list_products'|trans({}, 'SandboxAssortmentBundleProduct') }}<small> {{ 'list.title.list_products_description'|trans({}, 'SandboxAssortmentBundleProduct') }}</small></h1>
 {% endblock %}
 
 {% block content %}
 <div class="well">
     <a href="{{ path('sylius_assortment_backend_product_create') }}" class="btn btn-primary">
-        <i class="icon-plus icon-white"></i> create product
+        <i class="icon-plus icon-white"></i> {{ 'list.button.create_product'|trans({}, 'SandboxAssortmentBundleProduct') }}
     </a>
     {% if not app.request.query.get('deleted') %}
     <a href="{{ path('sylius_assortment_backend_product_list', {'deleted': true}) }}" class="btn">
-        <i class="icon-trash"></i> show deleted products
+        <i class="icon-trash"></i> {{ 'list.button.show_deleted_products'|trans({}, 'SandboxAssortmentBundleProduct') }}
     </a>
     {% else %}
     <a href="{{ path('sylius_assortment_backend_product_list', {'deleted': false}) }}" class="btn">
-        <i class="icon-trash"></i> hide deleted products
+        <i class="icon-trash"></i> {{ 'list.button.hide_deleted_products'|trans({}, 'SandboxAssortmentBundleProduct') }}
     </a>
     {% endif %}
 </div>

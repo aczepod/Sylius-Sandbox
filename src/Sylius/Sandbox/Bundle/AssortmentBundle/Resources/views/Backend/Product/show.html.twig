@@ -1,6 +1,12 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
+
 {% import 'SandboxAssortmentBundle:Backend/Variant:macros.html.twig' as variantMacros %}
+
+{% block content %}
+<div class="page-header">
+    <h1>{{ 'show.title.show_product'|trans({}, 'SandboxAssortmentBundleProduct') }}</h1>
+</div>
 
 {% block header %}
     <h1>Product details</h1>
@@ -36,11 +42,11 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>#id</th>
-            <th>SKU</th>
-            <th>name</th>
-            <th>options</th>
-            <th>price</th>
+            <th>{{ 'show.table.product_id'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.product_sku'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.product_name'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.product_options'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.product_price'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
         </tr>
     </thead>
     <tbody>
@@ -68,16 +74,64 @@
 
 <div class="well">
     <a href="{{ path('sylius_assortment_backend_variant_create', {'productId': product.id}) }}" class="btn btn-primary">
-        <i class="icon-plus icon-white"></i> create variant
+        <i class="icon-plus icon-white"></i> <th>{{ 'show.button.create_variant'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
     </a>
 </div>
 
-{{ variantMacros.list(product.variants, product) }}
+{% if product.variants|length > 0 %}
+    <table class="table">
+    <thead>
+        <tr>
+            <th>{{ 'show.table.variant_id'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.variant_creation_time'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.variant_option_set'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.variant_price'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for variant in product.variants %}
+        <tr>
+            <td>{{ variant.id }}</td>
+            <td>{{ variant.createdAt|date('Y-m-d H:i:s') }}</td>
+            <td>
+                <ul>
+                {% for option in variant.options %}
+                    <li><strong>{{ option.name }}</strong>: {{ option.value }}</li>
+                {% endfor %}
+                </ul>
+            </td>
+            <td>{{ variant.price }} &euro;</td>
+            <td>
+                <div class="btn-group pull-right">
+                    <a href="{{ path('sylius_assortment_backend_variant_show', {'id': variant.id}) }}" class="btn">
+                       <i class="icon-book"></i> {{ 'show.button.show'|trans({}, 'SandboxAssortmentBundleProduct') }}
+                    </a>
+                    <a href="{{ path('sylius_assortment_backend_variant_update', {'id': variant.id}) }}" class="btn">
+                       <i class="icon-pencil"></i> {{ 'show.button.update'|trans({}, 'SandboxAssortmentBundleProduct') }}
+                    </a>
+                    <a href="{{ path('sylius_assortment_backend_variant_delete', {'id': variant.id}) }}" class="btn btn-danger confirmer"
+                        data-confirmer-question="{{ 'show.dialog.variant_confirm_delete'|trans({}, 'SandboxAssortmentBundleProduct') }}"
+                    >
+                        <i class="icon-remove icon-white"></i> {{ 'show.button.delete'|trans({}, 'SandboxAssortmentBundleProduct') }}
+                    </a>
+                </div>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<div class="alert alert-info">
+    <h4 class="alert-heading"><th>{{ 'show.information.title'|trans({}, 'SandboxAssortmentBundleProduct') }}</th></h4>
+    {{ 'show.information.no_variants'|trans({}, 'SandboxAssortmentBundleProduct') }}
+</div>
+{% endif %}
 
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th colspan="2">properties</th>
+            <th colspan="2">{{ 'show.table.properties'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
         </tr>
     </thead>
     <tbody>
@@ -88,7 +142,7 @@
         </tr>
         {% else %}
         <tr>
-            <td colspan="2">There are no properties for this product</td>
+            <td colspan="2">{{ 'show.information.no_properties'|trans({}, 'SandboxAssortmentBundleProduct') }}</td>
         </tr>
         {% endfor %}
     </tbody>

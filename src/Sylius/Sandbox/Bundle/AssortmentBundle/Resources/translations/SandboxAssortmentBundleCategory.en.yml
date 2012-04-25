@@ -9,6 +9,8 @@ show.button.product_show: show
 show.button.product_update: update
 show.dialog.product_confirm_delete: 'Are you sure you want to delete this product?'
 show.button.product_delete: delete
+show.information.title: Information
+show.information.no_products: 'There are no products to display.'
 update.title.update_category: 'Updating category'
 update.title.update_category_description: 'Use the form below to modify existing category'
 update.select.choose_category: 'choose category...'

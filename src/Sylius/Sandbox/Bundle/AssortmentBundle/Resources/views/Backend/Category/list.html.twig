@@ -3,12 +3,12 @@
 {% block content %}
 
 <div class="page-header">
-    <h1>{{ 'category.list.title.list_categories'|trans({}, 'SandboxAssortmentBundle') }}<small> {{ 'category.list.title.list_categories_description'|trans({}, 'SandboxAssortmentBundle') }}</small></h1>
+    <h1>{{ 'list.title.list_categories'|trans({}, 'SandboxAssortmentBundleCategory') }}<small> {{ 'list.title.list_categories_description'|trans({}, 'SandboxAssortmentBundleCategory') }}</small></h1>
 </div>
 
 <div class="well">
 <a href="{{ path('sylius_categorizer_backend_category_create', {'alias': catalog.alias}) }}" class="btn btn-primary">
-    <i class="icon-plus icon-white"></i> {{ 'category.list.button.create_category'|trans({}, 'SandboxAssortmentBundle') }}
+    <i class="icon-plus icon-white"></i> {{ 'list.button.create_category'|trans({}, 'SandboxAssortmentBundleCategory') }}
 </a>
 </div>
 
@@ -16,8 +16,8 @@
 <table class="table">
     <thead>
         <tr>
-            <th>{{ 'category.list.table.category_id'|trans({}, 'SandboxAssortmentBundle') }}</th>
-            <th>{{ 'category.list.table.category_name'|trans({}, 'SandboxAssortmentBundle') }}</th>
+            <th>{{ 'list.table.category_id'|trans({}, 'SandboxAssortmentBundleCategory') }}</th>
+            <th>{{ 'list.table.category_name'|trans({}, 'SandboxAssortmentBundleCategory') }}</th>
             <th></th>
         </tr>
     </thead>
@@ -43,15 +43,15 @@
                         </div>
                         <div class="btn-group">
                             <a href="{{ path('sylius_categorizer_backend_category_show', {'alias': catalog.alias, 'id': category.id}) }}" class="btn">
-                                <i class="icon-list-alt"></i> {{ 'category.list.button.list_products'|trans({}, 'SandboxAssortmentBundle') }}
+                                <i class="icon-list-alt"></i> {{ 'list.button.list_products'|trans({}, 'SandboxAssortmentBundleCategory') }}
                             </a>
                             <a href="{{ path('sylius_categorizer_backend_category_update', {'alias': catalog.alias, 'id': category.id}) }}" class="btn">
-                                <i class="icon-pencil"></i> {{ 'category.list.button.update'|trans({}, 'SandboxAssortmentBundle') }}
+                                <i class="icon-pencil"></i> {{ 'list.button.update'|trans({}, 'SandboxAssortmentBundleCategory') }}
                             </a>
                             <a href="{{ path('sylius_categorizer_backend_category_delete', {'alias': catalog.alias, 'id': category.id}) }}" class="btn btn-danger confirmer"
-                                data-confirmer-question="{{ 'category.list.dialog.category_confirm_delete'|trans({}, 'SandboxAssortmentBundle') }}"
+                                data-confirmer-question="{{ 'list.dialog.category_confirm_delete'|trans({}, 'SandboxAssortmentBundleCategory') }}"
                             >
-                                <i class="icon-remove icon-white"></i> {{ 'category.list.button.delete'|trans({}, 'SandboxAssortmentBundle') }}
+                                <i class="icon-remove icon-white"></i> {{ 'list.button.delete'|trans({}, 'SandboxAssortmentBundleCategory') }}
                             </a>
                         </div>
                     </div>
@@ -66,9 +66,9 @@
 </table>
 {% else %}
 <div class="alert alert-info">
-    <h4 class="alert-heading">{{ 'category.list.information.title'|trans({}, 'SandboxAssortmentBundle') }}</h4>
+    <h4 class="alert-heading">{{ 'list.information.title'|trans({}, 'SandboxAssortmentBundleCategory') }}</h4>
     There are no categories to display.
-    {{ 'category.list.information.no_categories'|trans({}, 'SandboxAssortmentBundle') }}
+    {{ 'list.information.no_categories'|trans({}, 'SandboxAssortmentBundleCategory') }}
 </div>
 {% endif %}
 

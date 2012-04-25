@@ -1,7 +1,7 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
 {% block header %}
-    <h1>Creating option<small> Use the form below to create a new option</small></h1>
+    <h1>{{ 'create.title.create_option'|trans({}, 'SandboxAssortmentBundleOption') }}<small> {{ 'create.title.create_option_description'|trans({}, 'SandboxAssortmentBundleOption') }}</small></h1>
 {% endblock %}
 
 {% block content %}
@@ -12,11 +12,11 @@
     <hr />
     <div id="sylius-assortment-option-values" data-prototype="{{ form_widget(form.values.get('prototype'))|e }}">
     </div>
-    <a id="sylius-assortment-option-values-adder" class="btn btn-success btn-large pull-right">add value</a>
+    <a id="sylius-assortment-option-values-adder" class="btn btn-success btn-large pull-right">{{ 'create.button.add_value'|trans({}, 'SandboxAssortmentBundleOption') }}</a>
 </fieldset>
     {{ form_widget(form._token) }}
     <div class="form-actions">
-       <input type="submit" value="create option" class="btn btn-primary btn-large" />
+       <input type="submit" value="{{ 'create.button.create_option'|trans({}, 'SandboxAssortmentBundleOption') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

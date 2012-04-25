@@ -1,13 +1,13 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
 {% block header %}
-    <h1>Product options<small> List of all created option types</small></h1>
+    <h1>{{ 'list.title.list_options'|trans({}, 'SandboxAssortmentBundleOption') }}<small> {{ 'list.title.list_options_description'|trans({}, 'SandboxAssortmentBundleOption') }}</small></h1>
 {% endblock %}
 
 {% block content %}
 <div class="well">
 <a href="{{ path('sylius_assortment_backend_option_create') }}" class="btn btn-primary">
-    <i class="icon-plus icon-white"></i> create option
+    <i class="icon-plus icon-white"></i> {{ 'list.button.create_option'|trans({}, 'SandboxAssortmentBundleOption') }}
 </a>
 </div>
 
@@ -15,11 +15,11 @@
     <table class="table">
     <thead>
         <tr>
-            <th>#id</th>
-            <th>name</th>
-            <th>values</th>
-            <th>created at</th>
-            <th>updated at</th>
+            <th>{{ 'list.table.option_id'|trans({}, 'SandboxAssortmentBundleOption') }}</th>
+            <th>{{ 'list.table.option_name'|trans({}, 'SandboxAssortmentBundleOption') }}</th>
+            <th>{{ 'list.table.option_values'|trans({}, 'SandboxAssortmentBundleOption') }}</th>
+            <th>{{ 'list.table.created_at'|trans({}, 'SandboxAssortmentBundleOption') }}</th>
+            <th>{{ 'list.table.updated_at'|trans({}, 'SandboxAssortmentBundleOption') }}</th>
             <th></th>
         </tr>
     </thead>
@@ -40,12 +40,12 @@
             <td>
                 <div class="btn-group pull-right">
                     <a href="{{ path('sylius_assortment_backend_option_update', {'id': option.id}) }}" class="btn">
-                       <i class="icon-pencil"></i> {{ 'update'|trans({}, 'SandboxCoreBundle') }}
+                       <i class="icon-pencil"></i> {{ 'list.button.update'|trans({}, 'SandboxAssortmentBundleOption') }}
                     </a>
                     <a href="{{ path('sylius_assortment_backend_option_delete', {'id': option.id}) }}" class="btn btn-danger confirmer"
-                        data-confirmer-question="{{ 'confirmer.q.option.delete'|trans({}, 'SandboxCoreBundle') }}"
+                        data-confirmer-question="{{ 'list.dialog.option_confirm_delete'|trans({}, 'SandboxAssortmentBundleOption') }}"
                     >
-                        <i class="icon-remove icon-white"></i> {{ 'delete'|trans({}, 'SandboxCoreBundle') }}
+                        <i class="icon-remove icon-white"></i> {{ 'list.button.delete'|trans({}, 'SandboxAssortmentBundleOption') }}
                     </a>
                 </div>
             </td>
@@ -55,8 +55,8 @@
 </table>
 {% else %}
 <div class="alert alert-info">
-    <h4 class="alert-heading">{{ 'alert.heading.info'|trans({}, 'SandboxCoreBundle') }}.</h4>
-    There are no options to display.
+    <h4 class="alert-heading">{{ 'list.information.title'|trans({}, 'SandboxAssortmentBundleOption') }}</h4>
+    {{ 'list.information.no_options'|trans({}, 'SandboxAssortmentBundleOption') }}
 </div>
 {% endif %}
 {% endblock %}

@@ -1,13 +1,13 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
 {% block header %}
-    <h1>Product properties list</h1>
+    <h1>{{ 'list.title.list_properties'|trans({}, 'SandboxAssortmentBundleProperty') }}</h1>
 {% endblock %}
 
 {% block content %}
 <div class="well">
 <a href="{{ path('sylius_assortment_backend_property_create') }}" class="btn btn-primary">
-    <i class="icon-plus icon-white"></i> create property
+    <i class="icon-plus icon-white"></i> {{ 'list.button.create_property'|trans({}, 'SandboxAssortmentBundleProperty') }}
 </a>
 </div>
 
@@ -15,10 +15,10 @@
     <table class="table">
     <thead>
         <tr>
-            <th>#id</th>
-            <th>name</th>
-            <th>presentation</th>
-            <th>creation time</th>
+            <th>{{ 'list.table.property_id'|trans({}, 'SandboxAssortmentBundleProperty') }}</th>
+            <th>{{ 'list.table.property_name'|trans({}, 'SandboxAssortmentBundleProperty') }}</th>
+            <th>{{ 'list.table.property_presentation'|trans({}, 'SandboxAssortmentBundleProperty') }}</th>
+            <th>{{ 'list.table.property_craated_at'|trans({}, 'SandboxAssortmentBundleProperty') }}</th>
             <th></th>
         </tr>
     </thead>
@@ -32,12 +32,12 @@
             <td>
                 <div class="btn-group pull-right">
                     <a href="{{ path('sylius_assortment_backend_property_update', {'id': property.id}) }}" class="btn">
-                       <i class="icon-pencil"></i> {{ 'update'|trans({}, 'SandboxCoreBundle') }}
+                       <i class="icon-pencil"></i> {{ 'list.button.update'|trans({}, 'SandboxAssortmentBundleProperty') }}
                     </a>
                     <a href="{{ path('sylius_assortment_backend_property_delete', {'id': property.id}) }}" class="btn btn-danger confirmer"
-                        data-confirmer-question="{{ 'confirmer.q.property.delete'|trans({}, 'SandboxCoreBundle') }}"
+                        data-confirmer-question="{{ 'list.dialog.property_confirm_delete'|trans({}, 'SandboxAssortmentBundleProperty') }}"
                     >
-                        <i class="icon-remove icon-white"></i> {{ 'delete'|trans({}, 'SandboxCoreBundle') }}
+                        <i class="icon-remove icon-white"></i> {{ 'list.button.delete'|trans({}, 'SandboxAssortmentBundleProperty') }}
                     </a>
                 </div>
             </td>
@@ -47,8 +47,8 @@
 </table>
 {% else %}
 <div class="alert alert-info">
-    <h4 class="alert-heading">{{ 'alert.heading.info'|trans({}, 'SandboxCoreBundle') }}.</h4>
-    There are no properties to display.
+    <h4 class="alert-heading">{{ 'list.information.title'|trans({}, 'SandboxAssortmentBundleProperty') }}</h4>
+    {{ 'list.information.no_properties'|trans({}, 'SandboxAssortmentBundleProperty') }}
 </div>
 {% endif %}
 {% endblock %}

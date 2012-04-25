@@ -18,11 +18,11 @@ show.information.title: Information
 show.information.no_variants: 'There are no variants of this product.'
 show.table.properties: properties
 show.information.no_properties: 'There are no properties for this product.'
-update.title.update_product: Updating product
-update.title.update_product_description: Use the form below to modify existing product
-update.select.choose_category: chooose category...
-update.button.add_property: add property
-update.button.save_changes: save changes
+update.title.update_product: 'Updating product'
+update.title.update_product_description: 'Use the form below to modify existing product'
+update.select.choose_category: 'chooose category...'
+update.button.add_property: 'add property'
+update.button.save_changes: 'save changes'
 list.title.list_products: Assortment
 list.title.list_products_description: 'List of all registered products in the store'
 list.button.create_product: 'create product'

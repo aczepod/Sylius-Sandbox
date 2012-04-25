@@ -2,12 +2,12 @@
 
 {% block content %}
 <div class="page-header">
-    <h1>Current orders.</h1>
+    <h1>{{ 'list.title.list_orders'|trans({}, 'SandboxSalesBundleOrder') }}</h1>
 </div>
 
 <div class="well">
 <a href="{{ path('sylius_sales_backend_status_list') }}" class="btn btn-primary">
-    <i class="icon-th-large icon-white"></i> manage order statuses
+    <i class="icon-th-large icon-white"></i> {{ 'list.button.manage_order_statuses'|trans({}, 'SandboxSalesBundleOrder') }}
 </a>
 </div>
 
@@ -16,22 +16,22 @@
 {% endif %}
 
 <ul class="nav nav-tabs">
-    <li><a href="{{ path('sylius_sales_backend_order_list') }}">show all orders</a></li>
-    <li><a href="{{ path('sylius_sales_backend_order_list', {'filters': {'closed': [false, '=']}}) }}">only open orders</a></li>
-    <li><a href="{{ path('sylius_sales_backend_order_list', {'filters': {'closed': [true, '=']}}) }}">only closed orders</a></li>
-    <li><a href="{{ path('sylius_sales_backend_order_list', {'filters': {'status': [0, '='], 'closed': [false, '=']}}) }}"><span class="label label-important">&nbsp;!&nbsp;</span> orders that need attention</a></li>
-    <li><a href="{{ path('sylius_sales_backend_order_list', {'filters': {'value': [500, '>']}}) }}">over <strong>500</strong> &euro;</a></li>
-    <li><a href="{{ path('sylius_sales_backend_order_list', {'filters': {'value': [500, '<']}}) }}">below <strong>500</strong> &euro;</a></li>
+    <li><a href="{{ path('sylius_sales_backend_order_list') }}">{{ 'list.filter.all_orders'|trans({}, 'SandboxSalesBundleOrder') }}</a></li>
+    <li><a href="{{ path('sylius_sales_backend_order_list', {'filters': {'closed': [false, '=']}}) }}">{{ 'list.filter.open_orders'|trans({}, 'SandboxSalesBundleOrder') }}</a></li>
+    <li><a href="{{ path('sylius_sales_backend_order_list', {'filters': {'closed': [true, '=']}}) }}">{{ 'list.filter.closed_orders'|trans({}, 'SandboxSalesBundleOrder') }}</a></li>
+    <li><a href="{{ path('sylius_sales_backend_order_list', {'filters': {'status': [0, '='], 'closed': [false, '=']}}) }}"><span class="label label-important">&nbsp;!&nbsp;</span> {{ 'list.filter.attention_orders'|trans({}, 'SandboxSalesBundleOrder') }}</a></li>
+    <li><a href="{{ path('sylius_sales_backend_order_list', {'filters': {'value': [500, '>']}}) }}">{{ 'list.filter.over_orders'|trans({}, 'SandboxSalesBundleOrder') }} <strong>500</strong> &euro;</a></li>
+    <li><a href="{{ path('sylius_sales_backend_order_list', {'filters': {'value': [500, '<']}}) }}">{{ 'list.filter.below_orders'|trans({}, 'SandboxSalesBundleOrder') }} <strong>500</strong> &euro;</a></li>
 </ul>
 
 {% if orders|length > 0 %}
 <table class="table">
     <thead>
         <tr>
-            <th><a href="{{ path('sylius_sales_backend_order_list', {'sort': 'id', 'order': sorter.order, 'filters': filter.current}) }}">#id</a></th>
-            <th><a href="{{ path('sylius_sales_backend_order_list', {'sort': 'value', 'order': sorter.order, 'filters': filter.current}) }}">value</a></th>
-            <th><a href="{{ path('sylius_sales_backend_order_list', {'sort': 'createdAt', 'order': sorter.order, 'filters': filter.current}) }}">creation time</a></th>
-            <th><a href="{{ path('sylius_sales_backend_order_list', {'sort': 'status', 'order': sorter.order, 'filters': filter.current}) }}">status</a></th>
+            <th><a href="{{ path('sylius_sales_backend_order_list', {'sort': 'id', 'order': sorter.order, 'filters': filter.current}) }}">{{ 'list.table.order_id'|trans({}, 'SandboxSalesBundleOrder') }}</a></th>
+            <th><a href="{{ path('sylius_sales_backend_order_list', {'sort': 'value', 'order': sorter.order, 'filters': filter.current}) }}">{{ 'list.table.order_value'|trans({}, 'SandboxSalesBundleOrder') }}</a></th>
+            <th><a href="{{ path('sylius_sales_backend_order_list', {'sort': 'createdAt', 'order': sorter.order, 'filters': filter.current}) }}">{{ 'list.table.order_created_at'|trans({}, 'SandboxSalesBundleOrder') }}</a></th>
+            <th><a href="{{ path('sylius_sales_backend_order_list', {'sort': 'status', 'order': sorter.order, 'filters': filter.current}) }}">{{ 'list.table.order_status'|trans({}, 'SandboxSalesBundleOrder') }}</a></th>
             <th></th>
         </tr>
     </thead>
@@ -47,14 +47,14 @@
             <td>
                 <div class="btn-group pull-right">
                     <a href="{{ path('sylius_sales_backend_order_show', {'id': order.id}) }}" class="btn">
-                        <i class="icon-book"></i> details
+                        <i class="icon-book"></i> {{ 'list.button.details'|trans({}, 'SandboxSalesBundleOrder') }}
                     </a>
                     {% if order.closed %}
-                    <a href="{{ path('sylius_sales_backend_order_open', {'id': order.id}) }}" class="btn">open</a>
+                    <a href="{{ path('sylius_sales_backend_order_open', {'id': order.id}) }}" class="btn">{{ 'list.button.open'|trans({}, 'SandboxSalesBundleOrder') }}</a>
                     {% else %}
-                    <a href="{{ path('sylius_sales_backend_order_close', {'id': order.id}) }}" class="btn">close</a>
+                    <a href="{{ path('sylius_sales_backend_order_close', {'id': order.id}) }}" class="btn">{{ 'list.button.close'|trans({}, 'SandboxSalesBundleOrder') }}</a>
                     <a href="{{ path('sylius_sales_backend_order_delete', {'id': order.id}) }}" class="btn btn-danger">
-                         <i class="icon-remove icon-white"></i> delete
+                         <i class="icon-remove icon-white"></i> {{ 'list.button.delete'|trans({}, 'SandboxSalesBundleOrder') }}
                     </a>
                     {% endif %}
                 </div>
@@ -65,8 +65,8 @@
 </table>
 {% else %}
 <div class="alert alert-info">
-    <h4 class="alert-heading">{{ 'alert.heading.info'|trans({}, 'SandboxCoreBundle') }}.</h4>
-    There are no orders to display.
+    <h4 class="alert-heading">{{ 'list.information.title'|trans({}, 'SandboxSalesBundleOrder') }}</h4>
+    {{ 'list.information.no_orders'|trans({}, 'SandboxSalesBundleOrder') }}
 </div>
 {% endif %}
 

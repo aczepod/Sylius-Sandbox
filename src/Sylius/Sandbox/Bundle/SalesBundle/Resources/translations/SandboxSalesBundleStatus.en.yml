@@ -1,0 +1,14 @@
+create.title.create_status: 'Add new status'
+create.title.create_status_description: 'Use the form below to create a order status'
+create.button.create_status: 'create status'
+list.title.list_statuses: 'Order statuses management'
+list.button.create_new_status: 'create new status'
+list.table.status_id: '#id'
+list.table.status_name: name
+list.button.update: update
+list.button.delete: delete
+list.information.title: Information
+list.information.no_statuses: 'There are no order statuses to display.'
+update.title.update_status: 'Editing status'
+update.title.update_status_description: 'Modify existing order status'
+update.button.save_changes: 'save changes'

@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="page-header">
-    <h1>Creating product.<small> Use the form below to create a new product...</small></h1>
+    <h1>{{ 'create.title.create_product'|trans({}, 'SandboxAssortmentBundleProduct') }}<small> {{ 'create.title.create_product_description'|trans({}, 'SandboxAssortmentBundleProduct') }}</small></h1>
 </div>
 
 <form action="{{ path('sylius_assortment_backend_product_create') }}" method="post" class="form-horizontal">
@@ -10,18 +10,18 @@
     {{ form_row(form.masterVariant.sku) }}
     {{ form_row(form.name, {'attr': {'class': 'span7'}}) }}
     {{ form_row(form.description, {'attr': {'class': 'span5', 'rows': 10}}) }}
-    {{ form_row(form.category, {'empty_value': "choose category..."}) }}
+    {{ form_row(form.category, {'empty_value': 'create.select.choose_category'|trans({}, 'SandboxAssortmentBundleProduct')}) }}
     {{ form_row(form.masterVariant.price) }}
     <hr />
     {{ form_row(form.options) }}
     <hr />
     <div id="sylius-assortment-product-properties" data-prototype="{{ form_widget(form.properties.get('prototype'))|e }}">
     </div>
-    <a id="sylius-assortment-product-property-adder" class="btn btn-success btn-large pull-right">add property</a>
+    <a id="sylius-assortment-product-property-adder" class="btn btn-success btn-large pull-right">{{ 'create.button.add_property'|trans({}, 'SandboxAssortmentBundleProduct') }}</a>
 </fieldset>
     {{ form_widget(form._token) }}
     <div class="form-actions">
-       <input type="submit" value="create product" class="btn btn-primary btn-large" />
+       <input type="submit" value="{{ 'create.button.create_product'|trans({}, 'SandboxAssortmentBundleProduct') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

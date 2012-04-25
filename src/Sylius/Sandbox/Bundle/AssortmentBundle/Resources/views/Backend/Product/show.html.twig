@@ -2,21 +2,21 @@
 
 {% block content %}
 <div class="page-header">
-    <h1>Product details.</h1>
+    <h1>{{ 'show.title.show_product'|trans({}, 'SandboxAssortmentBundleProduct') }}</h1>
 </div>
 
 <div class="well">
     <div class="btn-group">
         <a href="{{ path('sylius_assortment_product_show', {'id': product.id, 'slug': product.slug}) }}" class="btn">
-            <i class="icon-book"></i> show in the store
+            <i class="icon-book"></i> {{ 'show.button.show_in_store'|trans({}, 'SandboxAssortmentBundleProduct') }}
         </a>
         <a href="{{ path('sylius_assortment_backend_product_update', {'id': product.id}) }}" class="btn">
-            <i class="icon-pencil"></i> {{ 'update'|trans({}, 'SandboxCoreBundle') }}
+            <i class="icon-pencil"></i> {{ 'show.button.update'|trans({}, 'SandboxAssortmentBundleProduct') }}
         </a>
         <a href="{{ path('sylius_assortment_backend_product_delete', {'id': product.id}) }}" class="btn btn-danger confirmer"
-            data-confirmer-question="{{ 'confirmer.q.product.delete'|trans({}, 'SandboxCoreBundle') }}"
+            data-confirmer-question="{{ 'show.dialog.product_confirm_delete'|trans({}, 'SandboxAssortmentBundleProduct') }}"
         >
-            <i class="icon-remove icon-white"></i> {{ 'delete'|trans({}, 'SandboxCoreBundle') }}
+            <i class="icon-remove icon-white"></i> {{ 'show.button.delete'|trans({}, 'SandboxAssortmentBundleProduct') }}
         </a>
     </div>
 </div>
@@ -24,10 +24,10 @@
 <table class="table">
     <thead>
         <tr>
-            <th>#id</th>
-            <th>name</th>
-            <th>options</th>
-            <th>master price</th>
+            <th>{{ 'show.table.product_id'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.product_name'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.product_options'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.product_price'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
         </tr>
     </thead>
     <tbody>
@@ -54,7 +54,7 @@
 
 <div class="well">
 <a href="{{ path('sylius_assortment_backend_variant_create', {'productId': product.id}) }}" class="btn btn-primary">
-    <i class="icon-plus icon-white"></i> create variant
+    <i class="icon-plus icon-white"></i> <th>{{ 'show.button.create_variant'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
 </a>
 </div>
 
@@ -62,10 +62,10 @@
     <table class="table">
     <thead>
         <tr>
-            <th>#id</th>
-            <th>creation time</th>
-            <th>option set</th>
-            <th>price</th>
+            <th>{{ 'show.table.variant_id'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.variant_creation_time'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.variant_option_set'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
+            <th>{{ 'show.table.variant_price'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
             <th></th>
         </tr>
     </thead>
@@ -85,15 +85,15 @@
             <td>
                 <div class="btn-group pull-right">
                     <a href="{{ path('sylius_assortment_backend_variant_show', {'id': variant.id}) }}" class="btn">
-                       <i class="icon-book"></i> {{ 'show'|trans({}, 'SandboxCoreBundle') }}
+                       <i class="icon-book"></i> {{ 'show.button.show'|trans({}, 'SandboxAssortmentBundleProduct') }}
                     </a>
                     <a href="{{ path('sylius_assortment_backend_variant_update', {'id': variant.id}) }}" class="btn">
-                       <i class="icon-pencil"></i> {{ 'update'|trans({}, 'SandboxCoreBundle') }}
+                       <i class="icon-pencil"></i> {{ 'show.button.update'|trans({}, 'SandboxAssortmentBundleProduct') }}
                     </a>
                     <a href="{{ path('sylius_assortment_backend_variant_delete', {'id': variant.id}) }}" class="btn btn-danger confirmer"
-                        data-confirmer-question="{{ 'confirmer.q.variant.delete'|trans({}, 'SandboxCoreBundle') }}"
+                        data-confirmer-question="{{ 'show.dialog.variant_confirm_delete'|trans({}, 'SandboxAssortmentBundleProduct') }}"
                     >
-                        <i class="icon-remove icon-white"></i> {{ 'delete'|trans({}, 'SandboxCoreBundle') }}
+                        <i class="icon-remove icon-white"></i> {{ 'show.button.delete'|trans({}, 'SandboxAssortmentBundleProduct') }}
                     </a>
                 </div>
             </td>
@@ -103,15 +103,15 @@
 </table>
 {% else %}
 <div class="alert alert-info">
-    <h4 class="alert-heading">{{ 'alert.heading.info'|trans({}, 'SandboxCoreBundle') }}.</h4>
-    There are no variants of this product.
+    <h4 class="alert-heading"><th>{{ 'show.information.title'|trans({}, 'SandboxAssortmentBundleProduct') }}</th></h4>
+    {{ 'show.information.no_variants'|trans({}, 'SandboxAssortmentBundleProduct') }}
 </div>
 {% endif %}
 
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th colspan="2">properties</th>
+            <th colspan="2">{{ 'show.table.properties'|trans({}, 'SandboxAssortmentBundleProduct') }}</th>
         </tr>
     </thead>
     <tbody>
@@ -122,7 +122,7 @@
         </tr>
         {% else %}
         <tr>
-            <td colspan="2">There are no properties for this product</td>
+            <td colspan="2">{{ 'show.information.no_properties'|trans({}, 'SandboxAssortmentBundleProduct') }}</td>
         </tr>
         {% endfor %}
     </tbody>

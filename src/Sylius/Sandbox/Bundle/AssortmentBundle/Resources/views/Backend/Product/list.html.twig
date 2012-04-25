@@ -2,20 +2,20 @@
 
 {% block content %}
 <div class="page-header">
-    <h1>Assortment<small> List of all registered products in Sylius store</small></h1>
+    <h1>{{ 'list.title.list_products'|trans({}, 'SandboxAssortmentBundleProduct') }}<small> {{ 'list.title.list_products_description'|trans({}, 'SandboxAssortmentBundleProduct') }}</small></h1>
 </div>
 
 <div class="well">
 <a href="{{ path('sylius_assortment_backend_product_create') }}" class="btn btn-primary">
-    <i class="icon-plus icon-white"></i> create product
+    <i class="icon-plus icon-white"></i> {{ 'list.button.create_product'|trans({}, 'SandboxAssortmentBundleProduct') }}
 </a>
 {% if not app.request.query.get('deleted') %}
 <a href="{{ path('sylius_assortment_backend_product_list', {'deleted': true}) }}" class="btn">
-    <i class="icon-trash"></i> show deleted products
+    <i class="icon-trash"></i> {{ 'list.button.show_deleted_products'|trans({}, 'SandboxAssortmentBundleProduct') }}
 </a>
 {% else %}
 <a href="{{ path('sylius_assortment_backend_product_list', {'deleted': false}) }}" class="btn">
-    <i class="icon-trash"></i> hide deleted products
+    <i class="icon-trash"></i> {{ 'list.button.hide_deleted_products'|trans({}, 'SandboxAssortmentBundleProduct') }}
 </a>
 {% endif %}
 </div>
@@ -28,11 +28,11 @@
     <table class="table">
     <thead>
         <tr>
-            <th><a href="{{ path('sylius_assortment_backend_product_list', {'sort': 'id', 'order': sorter.order}) }}">#id</a></th>
-            <th><a href="{{ path('sylius_assortment_backend_product_list', {'sort': 'sku', 'order': sorter.order}) }}">SKU</a></th>
-            <th><a href="{{ path('sylius_assortment_backend_product_list', {'sort': 'name', 'order': sorter.order}) }}">name</a></th>
-            <th><a href="{{ path('sylius_assortment_backend_product_list', {'sort': 'category', 'order': sorter.order}) }}">category</a></th>
-            <th><a href="{{ path('sylius_assortment_backend_product_list', {'sort': 'updatedAt', 'order': sorter.order}) }}">updated at</a></th>
+            <th><a href="{{ path('sylius_assortment_backend_product_list', {'sort': 'id', 'order': sorter.order}) }}">{{ 'list.table.product_id'|trans({}, 'SandboxAssortmentBundleProduct') }}</a></th>
+            <th><a href="{{ path('sylius_assortment_backend_product_list', {'sort': 'sku', 'order': sorter.order}) }}">{{ 'list.table.product_sku'|trans({}, 'SandboxAssortmentBundleProduct') }}</a></th>
+            <th><a href="{{ path('sylius_assortment_backend_product_list', {'sort': 'name', 'order': sorter.order}) }}">{{ 'list.table.product_name'|trans({}, 'SandboxAssortmentBundleProduct') }}</a></th>
+            <th><a href="{{ path('sylius_assortment_backend_product_list', {'sort': 'category', 'order': sorter.order}) }}">{{ 'list.table.product_category'|trans({}, 'SandboxAssortmentBundleProduct') }}</a></th>
+            <th><a href="{{ path('sylius_assortment_backend_product_list', {'sort': 'updatedAt', 'order': sorter.order}) }}">{{ 'list.table.product_updated_at'|trans({}, 'SandboxAssortmentBundleProduct') }}</a></th>
             <th></th>
         </tr>
     </thead>
@@ -49,30 +49,30 @@
                 <div class="btn-toolbar pull-right">
                     <div class="btn-group">
                         <a href="{{ path('sylius_assortment_backend_variant_list', {'productId': product.id}) }}" class="btn">
-                           <i class="icon-book"></i> list variants
+                           <i class="icon-book"></i> {{ 'list.button.list_variants'|trans({}, 'SandboxAssortmentBundleProduct') }}
                         </a>
                     </div>
                     <div class="btn-group">
                         <a href="{{ path('sylius_assortment_backend_product_show', {'id': product.id}) }}" class="btn">
-                           <i class="icon-book"></i> {{ 'show'|trans({}, 'SandboxCoreBundle') }}
+                           <i class="icon-book"></i> {{ 'list.button.show'|trans({}, 'SandboxAssortmentBundleProduct') }}
                         </a>
                         <a href="{{ path('sylius_assortment_backend_product_update', {'id': product.id}) }}" class="btn">
-                           <i class="icon-pencil"></i> {{ 'update'|trans({}, 'SandboxCoreBundle') }}
+                           <i class="icon-pencil"></i> {{ 'list.button.update'|trans({}, 'SandboxAssortmentBundleProduct') }}
                         </a>
                         <a href="{{ path('sylius_assortment_backend_product_duplicate', {'id': product.id}) }}" class="btn">
-                           <i class="icon-plus-sign"></i> {{ 'duplicate'|trans({}, 'SandboxCoreBundle') }}
+                           <i class="icon-plus-sign"></i> {{ 'list.button.duplicate'|trans({}, 'SandboxAssortmentBundleProduct') }}
                         </a>
                         <a href="{{ path('sylius_assortment_backend_product_delete', {'id': product.id}) }}" class="btn btn-danger confirmer"
-                            data-confirmer-question="{{ 'confirmer.q.product.delete'|trans({}, 'SandboxCoreBundle') }}"
+                            data-confirmer-question="{{ 'list.dialog.product_confirm_delete'|trans({}, 'SandboxAssortmentBundleProduct') }}"
                         >
-                            <i class="icon-remove icon-white"></i> {{ 'delete'|trans({}, 'SandboxCoreBundle') }}
+                            <i class="icon-remove icon-white"></i> {{ 'list.button.delete'|trans({}, 'SandboxAssortmentBundleProduct') }}
                         </a>
                     </div>
                 </div>
                 {% else %}
                 <div class="pull-right">
                     <span class="label label-important label-padded">
-                        <i class="icon-trash icon-white"></i> deleted
+                        <i class="icon-trash icon-white"></i> {{ 'list.label.deleted'|trans({}, 'SandboxAssortmentBundleProduct') }}
                     </span>
                 </div>
                 {% endif %}
@@ -83,8 +83,8 @@
 </table>
 {% else %}
 <div class="alert alert-info">
-    <h4 class="alert-heading">{{ 'alert.heading.info'|trans({}, 'SandboxCoreBundle') }}.</h4>
-    There are no products to display.
+    <h4 class="alert-heading">{{ 'list.information.title'|trans({}, 'SandboxAssortmentBundleProduct') }}</h4>
+    {{ 'list.information.no_products'|trans({}, 'SandboxAssortmentBundleProduct') }}
 </div>
 {% endif %}
 

@@ -3,8 +3,8 @@ update: __update
 confirmer.q.variant.delete: __confirmer.q.variant.delete
 delete: __delete
 show: __show
-confirmer.q.property.delete: __confirmer.q.property.delete
 build: __build
 confirmer.q.prototype.delete: __confirmer.q.prototype.delete
+confirmer.q.property.delete: __confirmer.q.property.delete
 confirmer.q.product.delete: __confirmer.q.product.delete
 duplicate: __duplicate

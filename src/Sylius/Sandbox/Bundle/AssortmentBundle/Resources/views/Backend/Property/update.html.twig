@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="page-header">
-    <h1>Updating property<small> Use the form below edit existing property</small></h1>
+    <h1>{{ 'update.title.update_property'|trans({}, 'SandboxAssortmentBundleProperty') }}<small> {{ 'update.title.update_property_description'|trans({}, 'SandboxAssortmentBundleProperty') }}</small></h1>
 </div>
 
 <form action="{{ path('sylius_assortment_backend_property_update', {'id': property.id}) }}" method="post" class="form-horizontal">
@@ -12,7 +12,7 @@
 </fieldset>
     {{ form_widget(form._token) }}
     <div class="form-actions">
-       <input type="submit" value="save changes" class="btn btn-primary btn-large" />
+       <input type="submit" value="{{ 'update.button.save_changes'|trans({}, 'SandboxAssortmentBundleProperty') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

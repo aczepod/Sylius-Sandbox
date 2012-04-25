@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="page-header">
-    <h1>Creating property<small> Use the form below to create a new property</small></h1>
+    <h1>{{ 'create.title.create_property'|trans({}, 'SandboxAssortmentBundleProperty') }}<small> {{ 'create.title.create_property_description'|trans({}, 'SandboxAssortmentBundleProperty') }}</small></h1>
 </div>
 
 <form action="{{ path('sylius_assortment_backend_property_create') }}" method="post" class="form-horizontal">
@@ -12,7 +12,7 @@
 </fieldset>
     {{ form_widget(form._token) }}
     <div class="form-actions">
-       <input type="submit" value="create property" class="btn btn-primary btn-large" />
+       <input type="submit" value="{{ 'create.button.create_property'|trans({}, 'SandboxAssortmentBundleProperty') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

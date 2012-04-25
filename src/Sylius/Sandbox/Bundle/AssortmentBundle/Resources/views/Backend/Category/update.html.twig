@@ -1,18 +1,18 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
 {% block header %}
-    <h1>Updating category<small> Use the form below to modify existing category</small></h1>
+    <h1>{{ 'category.update.title.update_category'|trans({}, 'SandboxAssortmentBundle') }}<small> {{ 'category.update.title.update_category_description'|trans({}, 'SandboxAssortmentBundle') }}</small></h1>
 {% endblock %}
 
 {% block content %}
 <form action="{{ path('sylius_categorizer_backend_category_update', {'alias': catalog.alias, 'id': category.id}) }}" method="post" class="form-horizontal">
 <fieldset>
     {{ form_row(form.name, {'attr': {'class': 'span7'}}) }}
-    {{ form_row(form.parent, {'empty_value': "choose category..."}) }}
+    {{ form_row(form.parent, {'empty_value': 'category.update.select.choose_category'|trans({}, 'SandboxAssortmentBundle')}) }}
 </fieldset>
     {{ form_rest(form) }}
     <div class="form-actions">
-    <input type="submit" value="save changes" class="btn btn-primary btn-large" />
+    <input type="submit" value="{{ 'category.update.button.save_changes'|trans({}, 'SandboxAssortmentBundle') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

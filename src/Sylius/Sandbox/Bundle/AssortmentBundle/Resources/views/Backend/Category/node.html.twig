@@ -19,15 +19,15 @@
                 </div>
                 <div class="btn-group">
                     <a href="{{ path('sylius_categorizer_backend_category_show', {'alias': catalog.alias, 'id': category.id}) }}" class="btn">
-                        <i class="icon-list-alt"></i> list products
+                        <i class="icon-list-alt"></i> {{ 'category.list.button.list_products'|trans({}, 'SandboxAssortmentBundle') }}
                     </a>
                     <a href="{{ path('sylius_categorizer_backend_category_update', {'alias': catalog.alias, 'id': category.id}) }}" class="btn">
-                        <i class="icon-pencil"></i> {{ 'update'|trans({}, 'SandboxCoreBundle') }}
+                        <i class="icon-pencil"></i> {{ 'category.list.button.update'|trans({}, 'SandboxAssortmentBundle') }}
                     </a>
                     <a href="{{ path('sylius_categorizer_backend_category_delete', {'alias': catalog.alias, 'id': category.id}) }}" class="btn btn-danger confirmer"
-                        data-confirmer-question="{{ 'confirmer.q.category.delete'|trans({}, 'SandboxCoreBundle') }}"
+                        data-confirmer-question="{{ 'category.list.dialog.category_confirm_delete'|trans({}, 'SandboxAssortmentBundle') }}"
                     >
-                        <i class="icon-remove icon-white"></i> {{ 'delete'|trans({}, 'SandboxCoreBundle') }}
+                        <i class="icon-remove icon-white"></i> {{ 'category.list.button.delete'|trans({}, 'SandboxAssortmentBundle') }}
                     </a>
                 </div>
             </div>

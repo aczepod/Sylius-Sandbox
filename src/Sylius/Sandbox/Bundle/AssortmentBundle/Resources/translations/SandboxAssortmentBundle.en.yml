@@ -1,15 +1,31 @@
+category.show.title.show_category: 'Assortment category.'
+category.show.title.show_category_description: 'List of all registered products in this category.'
+category.show.button.create_product: 'create product'
+category.show.table.product_id: '#id'
+category.show.table.product_name: name
+category.show.table.product_price: price
+category.show.table.product_created_at: 'created at'
+category.show.button.product_show: show
+category.show.button.product_update: update
+category.show.dialog.product_confirm_delete: 'Are you sure you want to delete the selected product?'
+category.show.button.product_delete: delete
+category.update.title.update_category: Updating category.
+category.update.title.update_category_description: Use the form below to modify existing category.
+category.update.select.choose_category: choose category...
+category.update.button.save_changes: save changes
+category.list.title.list_categories: Categories.
+category.list.title.list_categories_description: 'Manage assortment categories.'
+category.list.button.create_category: 'create category'
+category.list.table.category_id: '#id'
+category.list.table.category_name: name
+category.list.button.list_products: 'list products'
+category.list.button.update: update
+category.list.dialog.category_confirm_delete: 'Are you sure you want to delete the selected category?'
+category.list.button.delete: delete
+category.list.information.title: Information
+category.list.information.no_categories: 'There are no categories to display.'
 category.create.title.create_category: 'Creating category.'
 category.create.title.create_category_description: 'Use the form below to create a new assortment category.'
 category.create.select.choose_category: 'choose category...'
 category.create.button.create_category: 'create category'
-category.list.title.list_categories: Categories.
-category.list.title.list_categories_description: Manage assortment categories.
-category.list.button.create_category: create category
-category.list.table.category_id: '#id'
-category.list.table.category_name: name
-category.list.button.list_products: list products
-category.list.button.update: update
 category.list.dialog.confirm_delete: delete
-category.list.button.delete: delete
-category.list.information.title: Information
-category.list.information.no_categories: There are no categories to display.

@@ -1,0 +1,37 @@
+change_status.title.order_closed: 'Ova narudžbina je zatvorena!'
+change_status.select.order_status: 'status narudžbine...'
+change_status.button.change_status: 'izmeni status'
+list.title.list_orders: 'Trenutne narudžbine'
+list.button.manage_order_statuses: 'upravljaj statusima narudžbina'
+list.filter.all_orders: 'prikaži sve narudžbine'
+list.filter.open_orders: 'samo otvorene narudžbine'
+list.filter.closed_orders: 'samo zatvorene narudžbine'
+list.filter.attention_orders: 'narudžbine koje zahtevaju pažnju'
+list.filter.over_orders: iznad
+list.filter.below_orders: ispod
+list.table.order_id: '#id'
+list.table.order_value: vrednost
+list.table.order_created_at: kreirana
+list.table.order_status: status
+list.button.details: detalji
+list.button.open: otvori
+list.button.close: zatvori
+list.button.delete: obriši
+list.information.title: Obaveštenje
+list.information.no_orders: 'Nema narudžbina.'
+show.title.show_order: 'Detalji narudžbine'
+'show.title.show_order_description %order_id%': 'ID: %order_id%'
+show.table.basic_information: 'Osnovne informacije'
+show.table.order_id: '#id'
+show.table.order_value: vrednost
+show.table.order_created_at: kreirana
+show.table.order_status: status
+show.table.address_information: 'Adresni podaci'
+show.table.address_firstname: ime
+show.table.address_lastname: prezime
+show.table.address_street: ulica
+show.table.address_city: grad
+show.table.address_postcode: 'poštanski broj'
+show.table.product_name: 'naziv proizvoda'
+show.table.variant: varijanta
+show.table.quantity: količina

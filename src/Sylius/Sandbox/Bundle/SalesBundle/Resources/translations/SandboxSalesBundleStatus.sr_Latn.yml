@@ -1,0 +1,14 @@
+create.title.create_status: 'Kreiranje statusa'
+create.title.create_status_description: 'Popunite formular i kreirajte status narudžbine'
+create.button.create_status: 'kreiraj status'
+list.title.list_statuses: 'Upravljanje statusima narudžbina'
+list.button.create_new_status: 'kreiraj novi status'
+list.table.status_id: '#id'
+list.table.status_name: naziv
+list.button.update: ažuriraj
+list.button.delete: obriši
+list.information.title: Obaveštenje
+list.information.no_statuses: 'Nema statusa narudžbine.'
+update.title.update_status: 'Ažuriranje statusa'
+update.title.update_status_description: 'Popunite formular i izmenite postojeći status narudžbine'
+update.button.save_changes: 'sačuvaj izmene'

@@ -1,0 +1,18 @@
+update.title.update_prototype: 'Updating prototype'
+update.title.update_prototype_description: 'Use the form below edit existing prototype'
+update.button.save_changes: 'save changes'
+list.title.list_prototype: 'Product prototypes'
+list.title.list_prototype_description: 'List of all created prototype types'
+list.button.create_prototype: 'create prototype'
+list.table.prototype_id: '#id'
+list.table.prototype_name: name
+list.table.prototype_created_at: 'created at'
+list.button.build: build
+list.button.update: update
+list.dialog.prototype_confirm_delete: 'Are you sure you want to delete this prototype?'
+list.button.delete: delete
+list.information.title: Information
+list.information.no_prototypes: 'There are no prototypes to display.'
+create.title.create_prototype: 'Creating prototype'
+create.title.create_prototype_description: 'Use the form below to create a new prototype'
+create.button.create_prototype: 'create prototype'

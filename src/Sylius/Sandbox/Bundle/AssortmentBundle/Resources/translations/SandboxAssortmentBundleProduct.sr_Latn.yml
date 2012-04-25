@@ -1,0 +1,49 @@
+show.title.show_product: 'Detalji proizvoda'
+show.button.show_in_store: 'prikaži u prodavnici'
+show.button.update: ažuriraj
+show.dialog.product_confirm_delete: 'Da li ste sigurni da želite da obrišete ovaj proizvod?'
+show.button.delete: obriši
+show.table.product_id: '#id'
+show.table.product_name: naziv
+show.table.product_options: opcije
+show.table.product_price: cena
+show.button.create_variant: 'kreiraj varijantu'
+show.table.variant_id: '#id'
+show.table.variant_creation_time: 'kreirana'
+show.table.variant_option_set: 'set opcija'
+show.table.variant_price: cena
+show.button.show: prikaži
+show.dialog.variant_confirm_delete: 'Da li ste sigurni da želite da obrišete ovu varijantu?'
+show.information.title: Obaveštenje
+show.information.no_variants: 'Nema varijanti ovog proizvoda.'
+show.table.properties: svojstva
+show.information.no_properties: 'Nema svojstava ovog proizvoda.'
+update.title.update_product: Ažuriranje proizvoda
+update.title.update_product_description: Popunite formular i ažurirajte postojeći proizvod
+update.select.choose_category: izaberi kategoriju...
+update.button.add_property: dodaj svojstvo
+update.button.save_changes: sačuvaj izmene
+list.title.list_products: Asortiman
+list.title.list_products_description: 'Lista svih proizvoda u prodavnici'
+list.button.create_product: 'kreiraj proizvod'
+list.button.show_deleted_products: 'prikaži obrisane proizvode'
+list.button.hide_deleted_products: 'sakrij obrisane proizvode'
+list.table.product_id: '#id'
+list.table.product_sku: SKU
+list.table.product_name: naziv
+list.table.product_category: kategorija
+list.table.product_updated_at: 'ažurirano'
+list.button.list_variants: 'prikaži varijante'
+list.button.show: prikaži
+list.button.update: ažuriraj
+list.button.duplicate: kloniraj
+list.dialog.product_confirm_delete: 'Da li ste sigurni da želite da obrišete ovaj proizvod?'
+list.button.delete: obriši
+list.label.deleted: obrisan
+list.information.title: Obaveštenje
+list.information.no_products: 'Nema proizvoda.'
+create.title.create_product: 'Kreiranje proizvoda'
+create.title.create_product_description: 'Popunite formular i kreirajte novi proizvod'
+create.select.choose_category: 'izaberi kategoriju...'
+create.button.add_property: 'dodaj svojstvo'
+create.button.create_product: 'kreiraj proizvod'

@@ -8,8 +8,8 @@ list.button.create_option: 'kreiraj opciju'
 list.table.option_id: '#id'
 list.table.option_name: naziv
 list.table.option_values: vrednosti
-list.table.created_at: 'kreirana'
-list.table.updated_at: 'ažurirana'
+list.table.created_at: kreirana
+list.table.updated_at: ažurirana
 list.button.update: ažuriraj
 list.dialog.option_confirm_delete: 'Da li ste sigurni da želite da obrišete ovu opciju?'
 list.button.delete: obriši

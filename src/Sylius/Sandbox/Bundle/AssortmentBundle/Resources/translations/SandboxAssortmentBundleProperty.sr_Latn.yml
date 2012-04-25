@@ -1,0 +1,17 @@
+update.title.update_property: 'Ažuriranje svojstva'
+update.title.update_property_description: 'Popunite formular i ažurirajte postojeće svojstvo'
+update.button.save_changes: 'sačuvaj izmene'
+list.title.list_properties: 'Svojstva proizvoda'
+list.button.create_property: 'kreiraj svojstvo'
+list.table.property_id: '#id'
+list.table.property_name: naziv
+list.table.property_presentation: prezentacija
+list.table.property_craated_at: kreiran
+list.button.update: ažuriraj
+list.dialog.property_confirm_delete: 'Da li ste sigurni da želite da obrišete ovo svojstvo?'
+list.button.delete: obriši
+list.information.title: Obaveštenje
+list.information.no_properties: 'Nema svojstava.'
+create.title.create_property: 'Kreiranje svojstva'
+create.title.create_property_description: 'Popunite formular i kreirajte novo svojstvo'
+create.button.create_property: 'kreiraj svojstvo'

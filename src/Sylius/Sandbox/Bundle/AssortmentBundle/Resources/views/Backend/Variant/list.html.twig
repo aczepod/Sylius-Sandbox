@@ -3,13 +3,13 @@
 {% import 'SandboxAssortmentBundle:Backend/Variant:macros.html.twig' as macros %}
 
 {% block header %}
-    <h1>Assortment product variants<small> List of all product variants</small></h1>
+    <h1>{{ 'list.title.list_variants'|trans({}, 'SandboxAssortmentBundleVariant') }}<small> {{ 'list.title.list_variants_description'|trans({}, 'SandboxAssortmentBundleVariant') }}</small></h1>
 {% endblock %}
 
 {% block content %}
 <div class="well">
 <a href="{{ path('sylius_assortment_backend_variant_create', {'productId': product.id}) }}" class="btn btn-primary">
-    <i class="icon-plus icon-white"></i> create variant
+    <i class="icon-plus icon-white"></i> {{ 'list.button.create_variant'|trans({}, 'SandboxAssortmentBundleVariant') }}
 </a>
 </div>
 

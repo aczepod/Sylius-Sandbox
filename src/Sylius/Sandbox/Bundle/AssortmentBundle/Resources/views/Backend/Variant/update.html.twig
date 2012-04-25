@@ -1,7 +1,7 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
 {% block header %}
-    <h1>Updating variant<small> Use the form below to modify existing variant</small></h1>
+    <h1>{{ 'update.title.update_variant'|trans({}, 'SandboxAssortmentBundleVariant') }}<small> {{ 'update.title.update_variant_details'|trans({}, 'SandboxAssortmentBundleVariant') }}</small></h1>
 {% endblock %}
 
 {% block content %}
@@ -19,7 +19,7 @@
 </fieldset>
     {{ form_rest(form) }}
     <div class="form-actions">
-       <input type="submit" value="save changes" class="btn btn-primary btn-large" />
+       <input type="submit" value="{{ 'update.button.save_changes'|trans({}, 'SandboxAssortmentBundleVariant') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="page-header">
-    <h1>Updating variant<small> Use the form below to modify existing variant</small></h1>
+    <h1>{{ 'update.title.update_variant'|trans({}, 'SandboxAssortmentBundleVariant') }}<small> {{ 'update.title.update_variant_details'|trans({}, 'SandboxAssortmentBundleVariant') }}</small></h1>
 </div>
 
 <form action="{{ path('sylius_assortment_backend_variant_update', {'id': variant.id}) }}" method="post" class="form-horizontal">
@@ -18,7 +18,7 @@
 </fieldset>
     {{ form_rest(form) }}
     <div class="form-actions">
-       <input type="submit" value="save changes" class="btn btn-primary btn-large" />
+       <input type="submit" value="{{ 'update.button.save_changes'|trans({}, 'SandboxAssortmentBundleVariant') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

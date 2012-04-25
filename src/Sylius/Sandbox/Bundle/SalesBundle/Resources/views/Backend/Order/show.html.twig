@@ -1,19 +1,19 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
 {% block header %}
-    <h1>Order details</h1>
+    <h1>{{ 'show.title.show_order'|trans({}, 'SandboxSalesBundleOrder') }}<small> {{ 'show.title.show_order_description %order_id%'|trans({'%order_id%': order.id}, 'SandboxSalesBundleOrder') }}</small></h1>
 {% endblock %}
 
 {% block content %}
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th colspan="2">Basic information</th>
+            <th colspan="2">{{ 'show.table.basic_information'|trans({}, 'SandboxSalesBundleOrder') }}</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><strong>#id</strong></td>
+            <td><strong>{{ 'show.table.order_id'|trans({}, 'SandboxSalesBundleOrder') }}</strong></td>
             <td>{{ order.id }}</td>
         </tr>
         <tr>
@@ -21,11 +21,11 @@
             <td>{{ order.total }} &euro;</td>
         </tr>
         <tr>
-            <td><strong>created at</strong></td>
+            <td><strong>{{ 'show.table.order_created_at'|trans({}, 'SandboxSalesBundleOrder') }}</strong></td>
             <td>{{ order.createdAt|date('d.m.Y, H:i:s') }}</td>
         </tr>
         <tr>
-            <td><strong>status</strong></td>
+            <td><strong>{{ 'show.table.order_status'|trans({}, 'SandboxSalesBundleOrder') }}</strong></td>
             <td>
                 {% render 'sylius_sales.controller.backend.order:changeStatusAction' with {'id': order.id} %}
             </td>
@@ -36,28 +36,28 @@
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th colspan="2">Address information</th>
+            <th colspan="2">{{ 'show.table.address_information'|trans({}, 'SandboxSalesBundleOrder') }}</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><strong>firstname</strong></td>
+            <td><strong>{{ 'show.table.address_firstname'|trans({}, 'SandboxSalesBundleOrder') }}</strong></td>
             <td>{{ order.address.firstname }}</td>
         </tr>
         <tr>
-            <td><strong>lastname</strong></td>
+            <td><strong>{{ 'show.table.address_lastname'|trans({}, 'SandboxSalesBundleOrder') }}</strong></td>
             <td>{{ order.address.lastname }}</td>
         </tr>
         <tr>
-            <td><strong>street</strong></td>
+            <td><strong>{{ 'show.table.address_street'|trans({}, 'SandboxSalesBundleOrder') }}</strong></td>
             <td>{{ order.address.street }}</td>
         </tr>
         <tr>
-            <td><strong>city</strong></td>
+            <td><strong>{{ 'show.table.address_city'|trans({}, 'SandboxSalesBundleOrder') }}</strong></td>
             <td>{{ order.address.city }}</td>
         </tr>
         <tr>
-            <td><strong>postcode</strong></td>
+            <td><strong>{{ 'show.table.address_postcode'|trans({}, 'SandboxSalesBundleOrder') }}</strong></td>
             <td>{{ order.address.postcode }}</td>
         </tr>
     </tbody>

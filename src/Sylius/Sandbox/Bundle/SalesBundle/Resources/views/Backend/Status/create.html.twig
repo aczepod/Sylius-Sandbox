@@ -1,7 +1,7 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
 {% block header %}
-    <h1>Add new status<small> Use the form below to create a order status</small></h1>
+    <h1>{{ 'create.title.create_status'|trans({}, 'SandboxSalesBundleStatus') }}<small> {{ 'create.title.create_status_description'|trans({}, 'SandboxSalesBundleStatus') }}</small></h1>
 {% endblock %}
 
 {% block content %}
@@ -11,7 +11,7 @@
 </fieldset>
     {{ form_rest(form) }}
     <div class="form-actions">
-       <input type="submit" value="create status" class="btn btn-primary btn-large" />
+       <input type="submit" value="{{ 'create.button.create_status'|trans({}, 'SandboxSalesBundleStatus') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

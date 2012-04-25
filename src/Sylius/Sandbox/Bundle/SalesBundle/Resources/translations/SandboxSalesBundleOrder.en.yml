@@ -1,0 +1,37 @@
+change_status.title.order_closed: 'This order is closed!'
+change_status.select.order_status: 'order status...'
+change_status.button.change_status: 'change status'
+list.title.list_orders: 'Current orders'
+list.button.manage_order_statuses: 'manage order statuses'
+list.filter.all_orders: 'show all orders'
+list.filter.open_orders: 'only open orders'
+list.filter.closed_orders: 'only closed orders'
+list.filter.attention_orders: 'orders that need attention'
+list.filter.over_orders: over
+list.filter.below_orders: below
+list.table.order_id: '#id'
+list.table.order_value: value
+list.table.order_created_at: 'created at'
+list.table.order_status: status
+list.button.details: details
+list.button.open: open
+list.button.close: close
+list.button.delete: delete
+list.information.title: Information
+list.information.no_orders: 'There are no orders to display.'
+show.title.show_order: 'Order details'
+'show.title.show_order_description %order_id%': 'ID: %order_id%'
+show.table.basic_information: 'Basic information'
+show.table.order_id: '#id'
+show.table.order_value: value
+show.table.order_created_at: 'created at'
+show.table.order_status: status
+show.table.address_information: 'Address information'
+show.table.address_firstname: firstname
+show.table.address_lastname: lastname
+show.table.address_street: street
+show.table.address_city: city
+show.table.address_postcode: postcode
+show.table.product_name: 'product name'
+show.table.variant: variant
+show.table.quantity: quantity

@@ -8,11 +8,11 @@
 <form action="{{ path('sylius_categorizer_backend_category_update', {'alias': catalog.alias, 'id': category.id}) }}" method="post" class="form-horizontal">
 <fieldset>
     {{ form_row(form.name, {'attr': {'class': 'span7'}}) }}
-    {{ form_row(form.parent, {'empty_value': 'category.update.select.choose_category'|trans({}, 'SandboxAssortmentBundle')}) }}
+    {{ form_row(form.parent, {'empty_value': 'update.select.choose_category'|trans({}, 'SandboxAssortmentBundleCategory')}) }}
 </fieldset>
     {{ form_rest(form) }}
     <div class="form-actions">
-    <input type="submit" value="{{ 'category.update.button.save_changes'|trans({}, 'SandboxAssortmentBundle') }}" class="btn btn-primary btn-large" />
+    <input type="submit" value="{{ 'update.button.save_changes'|trans({}, 'SandboxAssortmentBundleCategory') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

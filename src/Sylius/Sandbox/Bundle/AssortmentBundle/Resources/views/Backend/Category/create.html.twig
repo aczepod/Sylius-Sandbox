@@ -1,18 +1,18 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
 {% block header %}
-    <h1>{{ 'category.create.title.create_category'|trans({}, 'SandboxAssortmentBundle') }}<small> {{ 'category.create.title.create_category_description'|trans({}, 'SandboxAssortmentBundle') }}</small></h1>
+    <h1>{{ 'create.title.create_category'|trans({}, 'SandboxAssortmentBundleCategory') }}<small> {{ 'create.title.create_category_description'|trans({}, 'SandboxAssortmentBundleCategory') }}</small></h1>
 {% endblock %}
 
 {% block content %}
 <form action="{{ path('sylius_categorizer_backend_category_create', {'alias': catalog.alias}) }}" method="post" class="form-horizontal">
 <fieldset>
     {{ form_row(form.name, {'attr': {'class': 'span7'}}) }}
-    {{ form_row(form.parent, {'empty_value': 'category.create.select.choose_category'|trans({}, 'SandboxAssortmentBundle')}) }}
+    {{ form_row(form.parent, {'empty_value': 'create.select.choose_category'|trans({}, 'SandboxAssortmentBundleCategory')}) }}
 </fieldset>
     {{ form_rest(form) }}
     <div class="form-actions">
-    <input type="submit" value="{{ 'category.create.button.create_category'|trans({}, 'SandboxAssortmentBundle') }}" class="btn btn-primary btn-large" />
+    <input type="submit" value="{{ 'create.button.create_category'|trans({}, 'SandboxAssortmentBundleCategory') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

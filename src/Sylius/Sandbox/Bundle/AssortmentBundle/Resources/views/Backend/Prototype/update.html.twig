@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="page-header">
-    <h1>Updating prototype<small> Use the form below edit existing prototype</small></h1>
+    <h1>{{ 'update.title.update_prototype'|trans({}, 'SandboxAssortmentBundlePrototype') }}<small> {{ 'update.title.update_prototype_description'|trans({}, 'SandboxAssortmentBundlePrototype') }}</small></h1>
 </div>
 
 <form action="{{ path('sylius_assortment_backend_prototype_update', {'id': prototype.id}) }}" method="post" class="form-horizontal">
@@ -14,7 +14,7 @@
 </fieldset>
     {{ form_widget(form._token) }}
     <div class="form-actions">
-       <input type="submit" value="save changes" class="btn btn-primary btn-large" />
+       <input type="submit" value="{{ 'update.button.save_changes'|trans({}, 'SandboxAssortmentBundlePrototype') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

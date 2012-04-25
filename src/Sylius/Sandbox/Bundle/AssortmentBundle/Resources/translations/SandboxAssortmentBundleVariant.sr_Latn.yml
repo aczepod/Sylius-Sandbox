@@ -1,0 +1,30 @@
+show.title.show_variant: 'Detalji varijante'
+show.button.add_variant: 'dodaj drugu vatijantu'
+show.button.show_in_store: 'prikaži u prodavnici'
+show.button.update: ažuriraj
+show.button.variant_confirm_delete: 'Da li ste sigurni da želite da obrišete ovu varijantu?'
+show.button.delete: obriši
+show.table.variant_id: '#id'
+show.table.variant_crated_at: kreirana
+show.table.variant_option_set: 'set opcija'
+show.table.variant_price: cena
+update.title.update_variant: 'Ažuriranje varijante'
+update.title.update_variant_details: 'Popunite formular i ažurirajte postojeću varijantu'
+update.button.save_changes: 'sačuvaj izmene'
+list.title.list_variants: 'Varijante proizvoda'
+list.title.list_variants_description: 'Lista svih varijanti proizvoda'
+list.button.create_variant: 'kreiraj varijantu'
+list.table.variant_id: '#id'
+list.table.variant_sku: SKU
+list.table.variant_created_at: kreirana
+list.table.variant_option_set: 'set opcjia'
+list.table.variant_price: cena
+list.button.show: prikaži
+list.button.update: ažuriraj
+list.dialog.variant_confirm_delete: 'Da li ste sigurni da želite da obrišete ovu varijantu?'
+list.button.delete: obriši
+list.infromation.title: Obaveštenje
+list.infromation.no_variants: 'Nema varijanti ovog proizvoda.'
+create.title.create_variant: 'Kreiraj varijantu'
+create.title.create_variant_description: 'Popunite formular i kreirajte novu varijantu'
+create.button.create_variant: 'kreiraj varijantu'

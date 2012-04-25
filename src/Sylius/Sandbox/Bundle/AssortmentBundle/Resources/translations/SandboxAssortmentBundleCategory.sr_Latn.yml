@@ -1,10 +1,10 @@
-show.title.show_category: 'Kategorija'
+show.title.show_category: Kategorija
 show.title.show_category_description: 'Lista svih proizvoda u ovoj kategorijji'
 show.button.create_product: 'kreiraj proizvod'
 show.table.product_id: '#id'
 show.table.product_name: naziv
 show.table.product_price: cena
-show.table.product_created_at: 'kreiran'
+show.table.product_created_at: kreiran
 show.button.product_show: prikaži
 show.button.product_update: ažuriraj
 show.dialog.product_confirm_delete: 'Da li ste sigurni da želite da obrišete ovaj proizvod?'

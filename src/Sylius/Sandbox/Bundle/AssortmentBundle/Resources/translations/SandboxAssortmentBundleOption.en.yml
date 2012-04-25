@@ -1,0 +1,21 @@
+update.title.update_option: Updating option
+update.title.update_option_description: Use the form below edit existing option
+update.button.add_value: add value
+update.button.save_changes: save changes
+list.title.list_options: 'Product options'
+list.title.list_options_description: 'List of all created option types'
+list.button.create_option: 'create option'
+list.table.option_id: '#id'
+list.table.option_name: name
+list.table.option_values: values
+list.table.created_at: 'created at'
+list.table.updated_at: 'updated at'
+list.button.update: update
+list.dialog.option_confirm_delete: 'Are you sure you want to delete the selected option?'
+list.button.delete: delete
+list.information.title: Information
+list.information.no_options: 'There are no options to display.'
+create.title.create_option: 'Creating option'
+create.title.create_option_description: 'Use the form below to create a new option'
+create.button.add_value: 'add value'
+create.button.create_option: 'create option'

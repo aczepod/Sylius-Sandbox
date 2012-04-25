@@ -1,5 +1,5 @@
-show.title.show_category: 'Assortment category.'
-show.title.show_category_description: 'List of all registered products in this category.'
+show.title.show_category: 'Assortment category'
+show.title.show_category_description: 'List of all registered products in this category'
 show.button.create_product: 'create product'
 show.table.product_id: '#id'
 show.table.product_name: name
@@ -9,12 +9,12 @@ show.button.product_show: show
 show.button.product_update: update
 show.dialog.product_confirm_delete: 'Are you sure you want to delete the selected product?'
 show.button.product_delete: delete
-update.title.update_category: 'Updating category.'
-update.title.update_category_description: 'Use the form below to modify existing category.'
+update.title.update_category: 'Updating category'
+update.title.update_category_description: 'Use the form below to modify existing category'
 update.select.choose_category: 'choose category...'
 update.button.save_changes: 'save changes'
-list.title.list_categories: Categories.
-list.title.list_categories_description: 'Manage assortment categories.'
+list.title.list_categories: Categories
+list.title.list_categories_description: 'Manage assortment categories'
 list.button.create_category: 'create category'
 list.table.category_id: '#id'
 list.table.category_name: name
@@ -24,8 +24,8 @@ list.dialog.category_confirm_delete: 'Are you sure you want to delete the select
 list.button.delete: delete
 list.information.title: Information
 list.information.no_categories: 'There are no categories to display.'
-create.title.create_category: 'Creating category.'
-create.title.create_category_description: 'Use the form below to create a new assortment category.'
+create.title.create_category: 'Creating category'
+create.title.create_category_description: 'Use the form below to create a new assortment category'
 create.select.choose_category: 'choose category...'
 create.button.create_category: 'create category'
 list.dialog.confirm_delete: delete

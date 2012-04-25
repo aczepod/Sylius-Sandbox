@@ -17,7 +17,7 @@ show.dialog.variant_confirm_delete: 'Are you sure you want to delete this varian
 show.information.title: Information
 show.information.no_variants: 'There are no variants of this product.'
 show.table.properties: properties
-show.information.no_properties: 'There are no properties for this product'
+show.information.no_properties: 'There are no properties for this product.'
 update.title.update_product: Updating product
 update.title.update_product_description: Use the form below to modify existing product
 update.select.choose_category: chooose category...

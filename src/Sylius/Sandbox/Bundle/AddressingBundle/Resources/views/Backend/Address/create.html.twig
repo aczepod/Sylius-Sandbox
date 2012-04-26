@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="page-header">
-    <h1>Creating address. <small>Use this form to add new address.</small></h1>
+    <h1>{{ 'create.title.create_address'|trans({}, 'SandboxAddressingBundleAddress') }}<small> {{ 'create.title.create_address_description'|trans({}, 'SandboxAddressingBundleAddress') }}</small></h1>
 </div>
 
 <form action="{{ path('sylius_addressing_backend_address_create') }}" method="post" class="form-horizontal">
@@ -15,7 +15,7 @@
 </fieldset>
     {{ form_rest(form) }}
     <div class="form-actions">
-       <input type="submit" value="create address" class="btn btn-primary btn-large" />
+       <input type="submit" value="{{ 'create.button.create_address'|trans({}, 'SandboxAddressingBundleAddress') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

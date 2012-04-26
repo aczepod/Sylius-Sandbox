@@ -3,29 +3,29 @@
 {% block content %}
 
 <div class="page-header">
-    <h1>Address details.</h1>
+    <h1>{{ 'show.title.show_address'|trans({}, 'SandboxAddressingBundleAddress') }}</h1>
 </div>
 
 <div class="well">
 <a href="{{ path('sylius_addressing_backend_address_update', {'id': address.id}) }}" class="btn">
-    <i class="icon-pencil"></i> {{ 'update'|trans({}, 'SandboxCoreBundle') }}
+    <i class="icon-pencil"></i> {{ 'show.button.update'|trans({}, 'SandboxAddressingBundleAddress') }}
 </a>
 <a href="{{ path('sylius_addressing_backend_address_delete', {'id': address.id}) }}"  class="btn btn-danger confirmer"
-    data-confirmer-question="{{ 'confirmer.q.address.delete'|trans({}, 'SandboxCoreBundle') }}"
+    data-confirmer-question="{{ 'show.dialog.address_confirm_delete'|trans({}, 'SandboxAddressingBundleAddress') }}"
 >
-    <i class="icon-remove icon-white"></i> {{ 'delete'|trans({}, 'SandboxCoreBundle') }}
+    <i class="icon-remove icon-white"></i> {{ 'show.button.delete'|trans({}, 'SandboxAddressingBundleAddress') }}
 </a>
 </div>
 
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>#id</th>
-            <th>firstname</th>
-            <th>lastname</th>
-            <th>city</th>
-            <th>street</th>
-            <th>postcode</th>
+            <th>{{ 'show.table.address_id'|trans({}, 'SandboxAddressingBundleAddress') }}</th>
+            <th>{{ 'show.table.address_firstname'|trans({}, 'SandboxAddressingBundleAddress') }}</th>
+            <th>{{ 'show.table.address_lastname'|trans({}, 'SandboxAddressingBundleAddress') }}</th>
+            <th>{{ 'show.table.address_city'|trans({}, 'SandboxAddressingBundleAddress') }}</th>
+            <th>{{ 'show.table.address_street'|trans({}, 'SandboxAddressingBundleAddress') }}</th>
+            <th>{{ 'show.table.address_postcode'|trans({}, 'SandboxAddressingBundleAddress') }}</th>
         </tr>
     </thead>
     <tbody>

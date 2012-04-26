@@ -1,0 +1,31 @@
+show.title.show_address: Address details
+show.button.update: update
+show.dialog.address_confirm_delete: Are you sure you want to delete this address?
+show.button.delete: delete
+show.table.address_id: '#id'
+show.table.address_firstname: firstname
+show.table.address_lastname: lastname
+show.table.address_city: city
+show.table.address_street: street
+show.table.address_postcode: postcode
+update.title.update_address: Address update
+update.title.update_address_description: Use this form to edit existing address
+update.button.save_changes: save changes
+list.title.list_addresses: Addresses list
+list.title.list_addresses_description: All saved addresses in the system
+list.button.create_address: create address
+list.table.address_id: '#id'
+list.table.address_firstname: firstname
+list.table.address_lastname: lastname
+list.table.address_city: city
+list.table.address_street: street
+list.table.address_postcode: postcode
+list.button.show: show
+list.button.update: update
+list.dialog.address_confirm_delete: Are you sure you want to delete this address?
+list.button.delete: delete
+list.information.title: __list.information.title
+list.information.no_addresses: There are no adresses to display.
+create.title.create_address: Creating address
+create.title.create_address_description: Use this form to add new address
+create.button.create_address: create address

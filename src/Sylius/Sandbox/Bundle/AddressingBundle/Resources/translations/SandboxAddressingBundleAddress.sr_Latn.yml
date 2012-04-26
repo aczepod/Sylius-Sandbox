@@ -1,0 +1,31 @@
+show.title.show_address: 'Detalji adrese'
+show.button.update: ažuriraj
+show.dialog.address_confirm_delete: 'Da li ste sigurni da želite da obrišete ovu adresu?'
+show.button.delete: obriši
+show.table.address_id: '#id'
+show.table.address_firstname: ime
+show.table.address_lastname: prezime
+show.table.address_city: grad
+show.table.address_street: ulica
+show.table.address_postcode: 'poštanski broj'
+update.title.update_address: 'Ažuriranje adrese'
+update.title.update_address_description: 'Popunite formular i ažurirajte postojeću adresu'
+update.button.save_changes: 'sačuvaj izmene'
+list.title.list_addresses: 'Adrese'
+list.title.list_addresses_description: 'Sve adrese sačuvane u sistemu'
+list.button.create_address: 'kreiraj adresu'
+list.table.address_id: '#id'
+list.table.address_firstname: ime
+list.table.address_lastname: prezime
+list.table.address_city: grad
+list.table.address_street: ulica
+list.table.address_postcode: 'poštanski broj'
+list.button.show: prikaži
+list.button.update: ažuriraj
+list.dialog.address_confirm_delete: 'Da li ste sigurni da želite da obrišete ovu adresu?'
+list.button.delete: obriši
+list.information.title: Obaveštenje
+list.information.no_addresses: 'Nema adresa.'
+create.title.create_address: 'Kreiranje adrese'
+create.title.create_address_description: 'Popunite formular i dodajte novu adresu'
+create.button.create_address: 'kreiraj adresu'

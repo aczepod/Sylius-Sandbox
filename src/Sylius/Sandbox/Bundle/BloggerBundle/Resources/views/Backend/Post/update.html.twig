@@ -1,7 +1,7 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
 {% block header %}
-    <h1>Updating post<small> Use this form to modify existing post</small></h1>
+    <h1>{{ 'update.title.update_post'|trans({}, 'SandboxBloggerBundlePost') }}<small> {{ 'update.title.update_post_description'|trans({}, 'SandboxBloggerBundlePost') }}</small></h1>
 {% endblock %}
 
 {% block content %}
@@ -15,7 +15,7 @@
 </fieldset>
     {{ form_rest(form) }}
     <div class="form-actions">
-    <input type="submit" class="btn btn-large btn-primary" value="save changes">
+    <input type="submit" class="btn btn-large btn-primary" value="{{ 'update.button.save_changes'|trans({}, 'SandboxBloggerBundlePost') }}">
     </div>
 </form>
 {% endblock %}

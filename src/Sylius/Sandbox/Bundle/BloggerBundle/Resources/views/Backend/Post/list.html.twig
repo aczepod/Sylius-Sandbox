@@ -1,13 +1,13 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
 {% block header %}
-    <h1>Posts list<small> Manage posts on blog</small></h1>
+    <h1>{{ 'list.title.list_posts'|trans({}, 'SandboxBloggerBundlePost') }}<small> {{ 'list.title.list_posts_description'|trans({}, 'SandboxBloggerBundlePost') }}</small></h1>
 {% endblock %}
 
 {% block content %}
 <div class="well">
 <a href="{{ path('sylius_blogger_backend_post_create') }}" class="btn btn-primary">
-    <i class="icon-plus icon-white"></i> create post
+    <i class="icon-plus icon-white"></i> {{ 'list.button.create_post'|trans({}, 'SandboxBloggerBundlePost') }}
 </a>
 </div>
 
@@ -15,9 +15,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>#id</th>
-            <th>title</th>
-            <th>author</th>
+            <th>{{ 'list.table.post_id'|trans({}, 'SandboxBloggerBundlePost') }}</th>
+            <th>{{ 'list.table.post_title'|trans({}, 'SandboxBloggerBundlePost') }}</th>
+            <th>{{ 'list.table.post_author'|trans({}, 'SandboxBloggerBundlePost') }}</th>
             <th></th>
         </tr>
     </thead>
@@ -30,17 +30,17 @@
                 <td>
                     <div class="pull-right btn-group">
                         <a href="{{ path('sylius_blogger_backend_post_show', {'id': post.id}) }}" class="btn">
-                            <i class="icon-book"></i> read
+                            <i class="icon-book"></i> {{ 'list.button.read'|trans({}, 'SandboxBloggerBundlePost') }}
                         </a>
                         <a href="{{ path('sylius_blogger_backend_post_update', {'id': post.id}) }}" class="btn">
-                            <i class="icon-pencil"></i> update
+                            <i class="icon-pencil"></i> {{ 'list.button.update'|trans({}, 'SandboxBloggerBundlePost') }}
                         </a>
                         <a href="{{ path('sylius_blogger_backend_post_delete', {'id': post.id}) }}" class="btn btn-danger confirmer"
                             data-toggle="modal"
                             data-target="confirmer-modal"
-                            data-confirmer-question="Are you sure you want to delete this post?"
+                            data-confirmer-question="{{ 'list.dialog.post_confirm_delete'|trans({}, 'SandboxBloggerBundlePost') }}"
                         >
-                            <i class="icon-remove icon-white"></i> delete
+                            <i class="icon-remove icon-white"></i> {{ 'list.button.delete'|trans({}, 'SandboxBloggerBundlePost') }}
                         </a>
                     </div>
                 </td>
@@ -50,8 +50,8 @@
 </table>
 {% else %}
 <div class="alert alert-info">
-    <h4 class="alert-heading">{{ 'alert.heading.info'|trans({}, 'SandboxCoreBundle') }}.</h4>
-    There are no posts to display.
+    <h4 class="alert-heading">{{ 'list.information.title'|trans({}, 'SandboxBloggerBundlePost') }}</h4>
+    {{ 'list.information.no_posts'|trans({}, 'SandboxBloggerBundlePost') }}
 </div>
 {% endif %}
 

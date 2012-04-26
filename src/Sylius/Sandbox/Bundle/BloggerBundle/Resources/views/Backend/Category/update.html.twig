@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="page-header">
-    <h1>Updating category.<small> Use the form below to modify existing category...</small></h1>
+    <h1>{{ 'update.title.update_category'|trans({}, 'SandboxBloggerBundleCategory') }}<small> {{ 'update.title.update_category_description'|trans({}, 'SandboxBloggerBundleCategory') }}</small></h1>
 </div>
 
 <form action="{{ path('sylius_categorizer_backend_category_update', {'alias': catalog.alias, 'id': category.id}) }}" method="post" class="form-horizontal">
@@ -11,7 +11,7 @@
 </fieldset>
     {{ form_rest(form) }}
     <div class="form-actions">
-    <input type="submit" value="save changes" class="btn btn-primary btn-large" />
+    <input type="submit" value="{{ 'update.button.save_changes'|trans({}, 'SandboxBloggerBundleCategory') }}" class="btn btn-primary btn-large" />
     </div>
 </form>
 {% endblock %}

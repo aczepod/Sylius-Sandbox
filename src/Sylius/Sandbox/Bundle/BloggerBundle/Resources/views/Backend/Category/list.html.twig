@@ -3,12 +3,12 @@
 {% block content %}
 
 <div class="page-header">
-    <h1>Categories.<small> Manage blog categories...</small></h1>
+    <h1>{{ 'list.title.list_categories'|trans({}, 'SandboxBloggerBundleCategory') }}<small> {{ 'list.title.list_categories_description'|trans({}, 'SandboxBloggerBundleCategory') }}</small></h1>
 </div>
 
 <div class="well">
 <a href="{{ path('sylius_categorizer_backend_category_create', {'alias': catalog.alias}) }}" class="btn btn-primary">
-    <i class="icon-plus icon-white"></i> create category
+    <i class="icon-plus icon-white"></i> {{ 'list.button.create_category'|trans({}, 'SandboxBloggerBundleCategory') }}
 </a>
 </div>
 
@@ -16,8 +16,8 @@
 <table class="table">
     <thead>
         <tr>
-            <th>#id</th>
-            <th>name</th>
+            <th>{{ 'list.table.category_id'|trans({}, 'SandboxBloggerBundleCategory') }}</th>
+            <th>{{ 'list.table.category_name'|trans({}, 'SandboxBloggerBundleCategory') }}</th>
             <th></th>
         </tr>
     </thead>
@@ -43,15 +43,15 @@
                         </div>
                         <div class="btn-group">
                             <a href="{{ path('sylius_categorizer_backend_category_show', {'alias': catalog.alias, 'id': category.id}) }}" class="btn">
-                                <i class="icon-list-alt"></i> list posts
+                                <i class="icon-list-alt"></i> {{ 'list.button.list_posts'|trans({}, 'SandboxBloggerBundleCategory') }}
                             </a>
                             <a href="{{ path('sylius_categorizer_backend_category_update', {'alias': catalog.alias, 'id': category.id}) }}" class="btn">
-                                <i class="icon-pencil"></i> {{ 'update'|trans({}, 'SandboxCoreBundle') }}
+                                <i class="icon-pencil"></i> {{ 'list.button.update'|trans({}, 'SandboxBloggerBundleCategory') }}
                             </a>
                             <a href="{{ path('sylius_categorizer_backend_category_delete', {'alias': catalog.alias, 'id': category.id}) }}" class="btn btn-danger confirmer"
-                                data-confirmer-question="{{ 'confirmer.q.category.delete'|trans({}, 'SandboxCoreBundle') }}"
+                                data-confirmer-question="{{ 'list.dialog.category_confirm_delete'|trans({}, 'SandboxBloggerBundleCategory') }}"
                             >
-                                <i class="icon-remove icon-white"></i> {{ 'delete'|trans({}, 'SandboxCoreBundle') }}
+                                <i class="icon-remove icon-white"></i> {{ 'list.button.delete'|trans({}, 'SandboxBloggerBundleCategory') }}
                             </a>
                         </div>
                     </div>
@@ -62,8 +62,8 @@
 </table>
 {% else %}
 <div class="alert alert-info">
-    <h4 class="alert-heading">{{ 'alert.heading.info'|trans({}, 'SandboxCoreBundle') }}.</h4>
-    There are no categories to display.
+    <h4 class="alert-heading">{{ 'list.information.title'|trans({}, 'SandboxBloggerBundleCategory') }}</h4>
+    {{ 'list.information.no_categories'|trans({}, 'SandboxBloggerBundleCategory') }}
 </div>
 {% endif %}
 

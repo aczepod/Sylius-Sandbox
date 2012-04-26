@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="page-header">
-    <h1>Create post.<small> Use this form to create a post...</small></h1>
+    <h1>{{ 'create.title.create_post'|trans({}, 'SandboxBloggerBundlePost') }}<small> {{ 'create.title.create_post_description'|trans({}, 'SandboxBloggerBundlePost') }}</small></h1>
 </div>
 
 <form action="{{ path('sylius_blogger_backend_post_create') }}" method="post" class="form-horizontal">
@@ -15,7 +15,7 @@
 </fieldset>
     {{ form_rest(form) }}
     <div class="form-actions">
-    <input type="submit" class="btn btn-large btn-primary" value="create post">
+    <input type="submit" class="btn btn-large btn-primary" value="{{ 'create.button.create_post'|trans({}, 'SandboxBloggerBundlePost') }}">
     </div>
 </form>
 {% endblock %}

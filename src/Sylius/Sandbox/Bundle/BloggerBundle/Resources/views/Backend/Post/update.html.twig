@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="page-header">
-    <h1>Updating post.<small> Use this form to modify existing post...</small></h1>
+    <h1>{{ 'update.title.update_post'|trans({}, 'SandboxBloggerBundlePost') }}<small> {{ 'update.title.update_post_description'|trans({}, 'SandboxBloggerBundlePost') }}</small></h1>
 </div>
 
 <form action="{{ path('sylius_blogger_backend_post_update', {'id': post.id}) }}" method="post" class="form-horizontal">
@@ -15,7 +15,7 @@
 </fieldset>
     {{ form_rest(form) }}
     <div class="form-actions">
-    <input type="submit" class="btn btn-large btn-primary" value="save changes">
+    <input type="submit" class="btn btn-large btn-primary" value="{{ 'update.button.save_changes'|trans({}, 'SandboxBloggerBundlePost') }}">
     </div>
 </form>
 {% endblock %}

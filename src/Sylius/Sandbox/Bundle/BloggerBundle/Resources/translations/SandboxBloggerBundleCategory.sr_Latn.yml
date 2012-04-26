@@ -1,0 +1,29 @@
+show.title.show_category: 'Blog kategorija'
+show.title.show_category_description: 'Lista svih članaka u ovoj kategoriji'
+show.button.create_post: 'kreiraj članak'
+show.table.post_id: '#id'
+show.table.post_title: naslov
+show.table.post_author: autor
+show.button.read: čitaj
+show.button.update: ažuriraj
+show.dialog.post_confirm_delete: 'Da li ste sigurni da želite da obrišete ovaj članak?'
+show.button.delete: obriši
+show.information.title: Obaveštenje
+show.information.no_posts: 'Nema članaka.'
+update.title.update_category: 'Ažuriranje kategorije'
+update.title.update_category_description: 'Popunite formular i ažurirajte postojeću kategoriju'
+update.button.save_changes: 'sačuvaj izmene'
+list.title.list_categories: Kategorije
+list.title.list_categories_description: 'Upravljajte kategorijama bloga'
+list.button.create_category: 'kreiraj kategoriju'
+list.table.category_id: '#id'
+list.table.category_name: naziv
+list.button.list_posts: 'prikaži članke'
+list.button.update: ažuriraj
+list.dialog.category_confirm_delete: 'Da li ste sigurni da želite da obrišete ovu kategoriju?'
+list.button.delete: obriši
+list.information.title: Obaveštenje
+list.information.no_categories: 'Nema kategorija.'
+create.title.create_category: 'Kreiranje kategorije'
+create.title.create_category_description: 'Popunite formular i kreirajte novu kategoriju'
+create.button.create_category: 'kreiraj kategoriju'

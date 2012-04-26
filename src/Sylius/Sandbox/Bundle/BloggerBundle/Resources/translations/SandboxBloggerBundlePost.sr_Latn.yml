@@ -1,0 +1,26 @@
+show.title.show_post: 'Post details'
+show.button.update: update
+show.dialog.post_confirm_delete: 'Are you sure you want to delete this post?'
+show.button.delete: delete
+show.table.post_id: '#id'
+show.table.post_title: title
+show.table.post_author: author
+show.title.post_content: 'Post content'
+update.title.update_post: 'Updating post'
+update.title.update_post_description: 'Use this form to modify existing post'
+update.button.save_changes: 'save changes'
+list.title.list_posts: 'Posts list'
+list.title.list_posts_description: 'Manage posts on blog'
+list.button.create_post: 'create post'
+list.table.post_id: '#id'
+list.table.post_title: title
+list.table.post_author: author
+list.button.read: read
+list.button.update: update
+list.dialog.post_confirm_delete: 'Are you sure you want to delete this post?'
+list.button.delete: delete
+list.information.title: Information
+list.information.no_posts: 'There are no posts to display.'
+create.title.create_post: 'Create post'
+create.title.create_post_description: 'Use this form to create a post'
+create.button.create_post: 'create post'

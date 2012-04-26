@@ -1,13 +1,13 @@
 {% extends 'SandboxCoreBundle:Backend:layout.html.twig' %}
 
 {% block header %}
-    <h1>Addresses list <small>All saved addresses in the system</small></h1>
+    <h1>{{ 'list.title.list_addresses'|trans({}, 'SandboxAddressingBundleAddress') }}<small> {{ 'list.title.list_addresses_description'|trans({}, 'SandboxAddressingBundleAddress') }}</small></h1>
 {% endblock %}
 
 {% block content %}
 <div class="well">
 <a href="{{ path('sylius_addressing_backend_address_create') }}" class="btn btn-primary">
-    <i class="icon-plus icon-white"></i> create address
+    <i class="icon-plus icon-white"></i> {{ 'list.button.create_address'|trans({}, 'SandboxAddressingBundleAddress') }}
 </a>
 </div>
 
@@ -19,12 +19,12 @@
 <table class="table">
     <thead>
         <tr>
-            <th><a href="{{ path('sylius_addressing_backend_address_list', {'sort': 'id', 'order': sorter.order}) }}">#id</a></th>
-            <th><a href="{{ path('sylius_addressing_backend_address_list', {'sort': 'firstname', 'order': sorter.order}) }}">firstname</a></th>
-            <th><a href="{{ path('sylius_addressing_backend_address_list', {'sort': 'lastname', 'order': sorter.order}) }}">lastname</a></th>
-            <th><a href="{{ path('sylius_addressing_backend_address_list', {'sort': 'city', 'order': sorter.order}) }}">city</a></th>
-            <th><a href="{{ path('sylius_addressing_backend_address_list', {'sort': 'street', 'order': sorter.order}) }}">street</a></th>
-            <th><a href="{{ path('sylius_addressing_backend_address_list', {'sort': 'postcode', 'order': sorter.order}) }}">postcode</a></th>
+            <th><a href="{{ path('sylius_addressing_backend_address_list', {'sort': 'id', 'order': sorter.order}) }}">{{ 'list.table.address_id'|trans({}, 'SandboxAddressingBundleAddress') }}</a></th>
+            <th><a href="{{ path('sylius_addressing_backend_address_list', {'sort': 'firstname', 'order': sorter.order}) }}">{{ 'list.table.address_firstname'|trans({}, 'SandboxAddressingBundleAddress') }}</a></th>
+            <th><a href="{{ path('sylius_addressing_backend_address_list', {'sort': 'lastname', 'order': sorter.order}) }}">{{ 'list.table.address_lastname'|trans({}, 'SandboxAddressingBundleAddress') }}</a></th>
+            <th><a href="{{ path('sylius_addressing_backend_address_list', {'sort': 'city', 'order': sorter.order}) }}">{{ 'list.table.address_city'|trans({}, 'SandboxAddressingBundleAddress') }}</a></th>
+            <th><a href="{{ path('sylius_addressing_backend_address_list', {'sort': 'street', 'order': sorter.order}) }}">{{ 'list.table.address_street'|trans({}, 'SandboxAddressingBundleAddress') }}</a></th>
+            <th><a href="{{ path('sylius_addressing_backend_address_list', {'sort': 'postcode', 'order': sorter.order}) }}">{{ 'list.table.address_postcode'|trans({}, 'SandboxAddressingBundleAddress') }}</a></th>
             <th></th>
         </tr>
     </thead>
@@ -40,15 +40,15 @@
             <td>
                 <div class="btn-group pull-right">
                     <a href="{{ path('sylius_addressing_backend_address_show', {'id': address.id}) }}" class="btn">
-                        <i class="icon-book"></i> {{ 'show'|trans({}, 'SandboxCoreBundle') }}
+                        <i class="icon-book"></i> {{ 'list.button.show'|trans({}, 'SandboxAddressingBundleAddress') }}
                     </a>
                     <a href="{{ path('sylius_addressing_backend_address_update', {'id': address.id}) }}" class="btn">
-                        <i class="icon-pencil"></i> {{ 'update'|trans({}, 'SandboxCoreBundle') }}
+                        <i class="icon-pencil"></i> {{ 'list.button.update'|trans({}, 'SandboxAddressingBundleAddress') }}
                     </a>
                     <a href="{{ path('sylius_addressing_backend_address_delete', {'id': address.id}) }}"  class="btn btn-danger confirmer"
-                        data-confirmer-question="{{ 'confirmer.q.address.delete'|trans({}, 'SandboxCoreBundle') }}"
+                        data-confirmer-question="{{ 'list.dialog.address_confirm_delete'|trans({}, 'SandboxAddressingBundleAddress') }}"
                     >
-                        <i class="icon-remove icon-white"></i> {{ 'delete'|trans({}, 'SandboxCoreBundle') }}
+                        <i class="icon-remove icon-white"></i> {{ 'list.button.delete'|trans({}, 'SandboxAddressingBundleAddress') }}
                     </a>
                 </div>
             </td>
@@ -58,8 +58,8 @@
 </table>
 {% else %}
 <div class="alert alert-info">
-    <h4 class="alert-heading">{{ 'alert.heading.info'|trans({}, 'SandboxCoreBundle') }}.</h4>
-    There are no adresses to display.
+    <h4 class="alert-heading">{{ 'list.information.title'|trans({}, 'SandboxAddressingBundleAddress') }}</h4>
+    {{ 'list.information.no_addresses'|trans({}, 'SandboxAddressingBundleAddress') }}
 </div>
 {% endif %}
 

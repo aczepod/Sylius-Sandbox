@@ -19,6 +19,7 @@
         </many-to-one>
         <lifecycle-callbacks>
             <lifecycle-callback type="prePersist" method="save"/>
+            <lifecycle-callback type="preUpdate" method="save"/>
             <lifecycle-callback type="postRemove" method="delete"/>
         </lifecycle-callbacks>
     </entity>

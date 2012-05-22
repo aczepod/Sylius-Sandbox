@@ -98,11 +98,13 @@ class Product extends BaseProduct
 
     public function addImage(Image $image)
     {
+        $image->setProduct($this);
         $this->images->add($image);
     }
 
     public function removeImage(Image $image)
     {
+        $image->setProduct(null);
         $this->images->removeElement($image);
     }
 

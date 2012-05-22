@@ -17,6 +17,7 @@
                 $("#confirmer-modal a.confirmer-modal-confirm").attr('href', $(this).data('confirmerLink'));
             });
         });
+
         if ($("#sylius-sales-order-items").length > 0) {
             $("#sylius-sales-order-items-adder").click(function () {
                 addOrderItemForm();
@@ -25,7 +26,24 @@
                 addOrderItemForm();
             }
         }
+
+        if ($("#sylius_assortment_product_images").length > 0) {
+            $("#sylius-assortment-product-image-adder").click(function () {
+                addEntityForm($("#sylius_assortment_product_images"));
+            });
+
+            if ($("#sylius_assortment_product_images").children().length === 0) {
+                addEntityForm($("#sylius_assortment_product_images"));
+            }
+        }
     });
+
+     function addEntityForm(collectionHolder) {
+        collectionHolder.append(collectionHolder
+            .attr('data-prototype')
+            .replace(/__name__/g, collectionHolder.children().length)
+        );
+    }
     function addOrderItemForm() {
         var collectionHolder = $("#sylius-sales-order-items tbody");
         var prototype = $("#sylius-sales-order-items").attr('data-prototype');

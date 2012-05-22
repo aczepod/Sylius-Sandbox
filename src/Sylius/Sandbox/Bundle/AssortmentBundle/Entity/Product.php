@@ -132,4 +132,12 @@ class Product extends BaseProduct
             self::VARIANT_PICKING_MATCH  => 'Display options'
         );
     }
+
+    /**
+     * TODO: this is just a temporary fix.
+     */
+    public function getWebPath()
+    {
+        return $this->getImages()->count() ? $this->getImages()->get(0)->getWebPath() : null;
+    }
 }

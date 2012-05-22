@@ -14,6 +14,7 @@ namespace Sylius\Sandbox\Bundle\AssortmentBundle\Entity;
 use Sylius\Bundle\CategorizerBundle\Model\CategoryInterface;
 use Sylius\Bundle\AssortmentBundle\Entity\CustomizableProduct as BaseProduct;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class Product extends BaseProduct
 {
@@ -39,15 +40,11 @@ class Product extends BaseProduct
     protected $variantPickingMode;
 
     /**
-     * Image path.
+     * Product images.
      *
-     * @Assert\File(maxSize="512k")
-     * @Assert\Image
-     *
-     * @var string
+     * @var ArrayCollection
      */
-    protected $imagePath;
-    public $image;
+    protected $images;
 
     /**
      * Set default variant picking mode.
@@ -57,6 +54,7 @@ class Product extends BaseProduct
         parent::__construct();
 
         $this->variantPickingMode = self::VARIANT_PICKING_CHOICE;
+        $this->images = new ArrayCollection();
     }
 
     /**
@@ -98,6 +96,21 @@ class Product extends BaseProduct
         return self::VARIANT_PICKING_CHOICE === $this->variantPickingMode;
     }
 
+    public function addImage(Image $image)
+    {
+        $this->images->add($image);
+    }
+
+    public function removeImage(Image $image)
+    {
+        $this->images->removeElement($image);
+    }
+
+    public function getImages()
+    {
+        return $this->images;
+    }
+
     /**
      * This is a proxy method to access master variant price.
      * Because if there are no options/variants defined, the master variant is
@@ -108,59 +121,6 @@ class Product extends BaseProduct
     public function getPrice()
     {
         return $this->masterVariant->getPrice();
-    }
-
-    public function getImagePath()
-    {
-        return $this->imagePath;
-    }
-
-    public function setImagePath($imagePath)
-    {
-        $this->imagePath = $imagePath;
-    }
-
-    public function getAbsoluteImagePath()
-    {
-        return null === $this->getImagePath() ? null : $this->getImageUploadRootDir().'/'.$this->getImagePath();
-    }
-
-    public function getImageWebPath()
-    {
-        return null === $this->getImagePath() ? null : $this->getImageUploadDir().'/'.$this->getImagePath();
-    }
-
-    public function getImageUploadDir()
-    {
-        return 'uploads/images';
-    }
-
-    public function hasImage()
-    {
-        return null !== $this->getImagePath();
-    }
-
-    public function saveImage()
-    {
-        if (null === $this->image) {
-
-            return;
-        }
-
-        $this->setImagePath(uniqid().'.'.$this->image->guessExtension());
-        $this->image->move($this->getImageUploadRootDir(), $this->getImagePath());
-    }
-
-    public function deleteImage()
-    {
-        if ($file = $this->getAbsoluteImagePath()) {
-            unlink($file);
-        }
-    }
-
-    protected function getImageUploadRootDir()
-    {
-        return __DIR__.'/../../../../../../public/'.$this->getImageUploadDir();
     }
 
     static public function getVariantPickingModeChoices()

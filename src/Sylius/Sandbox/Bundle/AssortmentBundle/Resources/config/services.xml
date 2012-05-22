@@ -19,6 +19,9 @@
         <service id="sylius_sandbox_assortment.form.type.category" class="Sylius\Sandbox\Bundle\AssortmentBundle\Form\Type\CategoryType">
             <tag name="form.type" alias="sylius_sandbox_assortment_category" />
         </service>
+        <service id="sylius_sandbox_assortment.form.type.product_image" class="Sylius\Sandbox\Bundle\AssortmentBundle\Form\Type\ImageType">
+            <tag name="form.type" alias="sylius_sandbox_assortment_product_image" />
+        </service>
     </services>
 
 </container>

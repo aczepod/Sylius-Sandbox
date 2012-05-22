@@ -11,7 +11,11 @@
             <generator strategy="AUTO" />
         </id>
         <field name="variantPickingMode" column="variant_picking_mode" type="integer" />
-        <field name="imagePath" column="image_path" nullable="true" />
+        <one-to-many field="images" target-entity="Sylius\Sandbox\Bundle\AssortmentBundle\Entity\Image" mapped-by="product">
+            <cascade>
+                <cascade-all />
+            </cascade>
+        </one-to-many>
         <many-to-one field="category" target-entity="Sylius\Sandbox\Bundle\AssortmentBundle\Entity\Category">
             <join-column name="category_id" referenced-column-name="id" />
         </many-to-one>
@@ -41,10 +45,6 @@
                 <cascade-all />
             </cascade>
         </one-to-many>
-        <lifecycle-callbacks>
-            <lifecycle-callback type="prePersist" method="saveImage"/>
-            <lifecycle-callback type="postRemove" method="deleteImage"/>
-        </lifecycle-callbacks>
     </entity>
 
 </doctrine-mapping>

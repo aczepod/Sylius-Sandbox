@@ -28,6 +28,13 @@ class Image
     protected $id;
 
     /**
+     * Product.
+     *
+     * @var Product
+     */
+    protected $product;
+
+    /**
      * Image path.
      *
      * @var string

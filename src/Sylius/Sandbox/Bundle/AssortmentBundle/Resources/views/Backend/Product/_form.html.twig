@@ -14,7 +14,16 @@
             {{ form_row(form.description, {'attr': {'class': 'span5', 'rows': 10}}) }}
             <hr />
             <div class="control-group">
-                {{ form_widget(form.images) }}
+                {% if product.images|length > 0 %}
+                <div data-prototype="{{ form_widget(form.images.get('prototype'))|e }}" id="sylius_assortment_product_images">
+                    {% for image in product.images %}
+                        <img src="{{ image.webPath|apply_filter('frontend_medium') }}">
+                        {{ form_widget(form.images[loop.index0]) }}
+                    {% endfor %}
+                </div>
+                {% else %}
+                    {{ form_widget(form.images) }}
+                {% endif %}
             </div>
             <div class="control-group">
                 <div class="controls">

@@ -28,20 +28,11 @@ class Image
     protected $id;
 
     /**
-     * Product.
-     *
-     * @var Product
-     */
-    protected $product;
-
-    /**
      * Image path.
      *
      * @var string
      */
     protected $path;
-
-    public $image;
 
     /**
      * Product.
@@ -50,9 +41,28 @@ class Image
      */
     protected $product;
 
+    /**
+     * Last update time.
+     *
+     * @var int
+     */
+    protected $updatedAt;
+
+    public $image;
+
     public function getId()
     {
         return $this->id;
+    }
+
+    public function getProduct()
+    {
+        return $this->product;
+    }
+
+    public function setProduct(ProductInterface $product)
+    {
+        $this->product = $product;
     }
 
     public function getPath()
@@ -65,14 +75,19 @@ class Image
         $this->path = $path;
     }
 
-    public function getProduct()
+    public function getUpdatedAt()
     {
-        return $this->product;
+        return $this->updatedAt;
     }
 
-    public function setProduct(ProductInterface $product)
+    public function setUpdatedAt($updatedAt)
     {
-        $this->product = $product;
+        $this->updatedAt = $updatedAt;
+    }
+
+    public function incrementUpdatedAt()
+    {
+        $this->updatedAt = new \DateTime("now");
     }
 
     public function getAbsolutePath()

@@ -41,13 +41,6 @@ class Image
      */
     protected $product;
 
-    /**
-     * Last update time.
-     *
-     * @var int
-     */
-    protected $updatedAt;
-
     public $image;
 
     public function getId()
@@ -75,21 +68,6 @@ class Image
         $this->path = $path;
     }
 
-    public function getUpdatedAt()
-    {
-        return $this->updatedAt;
-    }
-
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->updatedAt = $updatedAt;
-    }
-
-    public function incrementUpdatedAt()
-    {
-        $this->updatedAt = new \DateTime("now");
-    }
-
     public function getAbsolutePath()
     {
         return null === $this->getPath() ? null : $this->getUploadRootDir() . DIRECTORY_SEPARATOR . $this->getPath();
@@ -105,7 +83,7 @@ class Image
         return 'uploads/images';
     }
 
-    public function save()
+    public function upload()
     {
         if (null === $this->image) {
 

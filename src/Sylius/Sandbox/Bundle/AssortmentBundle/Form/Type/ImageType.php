@@ -28,7 +28,6 @@ class ImageType extends AbstractType
     {
         $builder
             ->add('image', 'file')
-            ->add('updatedAt')
         ;
     }
 

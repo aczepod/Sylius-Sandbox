@@ -17,12 +17,6 @@
             </cascade>
             <join-column name="product_id" referenced-column-name="id" />
         </many-to-one>
-        <field name="updatedAt" column="updated_at" type="integer" nullable="true" />
-        <lifecycle-callbacks>
-            <lifecycle-callback type="prePersist" method="save"/>
-            <lifecycle-callback type="preUpdate" method="save"/>
-            <lifecycle-callback type="postRemove" method="delete"/>
-        </lifecycle-callbacks>
     </entity>
 
 </doctrine-mapping>

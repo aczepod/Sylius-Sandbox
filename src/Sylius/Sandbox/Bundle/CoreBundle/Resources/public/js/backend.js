@@ -29,21 +29,15 @@
 
         if ($("#sylius_assortment_product_images").length > 0) {
             $("#sylius-assortment-product-image-adder").click(function () {
-                addEntityForm($("#sylius_assortment_product_images"));
+                addImageForm();
             });
 
             if ($("#sylius_assortment_product_images").children().length === 0) {
-                addEntityForm($("#sylius_assortment_product_images"));
+                addImageForm();
             }
         }
     });
 
-     function addEntityForm(collectionHolder) {
-        collectionHolder.append(collectionHolder
-            .attr('data-prototype')
-            .replace(/__name__/g, collectionHolder.children().length)
-        );
-    }
     function addOrderItemForm() {
         var collectionHolder = $("#sylius-sales-order-items tbody");
         var prototype = $("#sylius-sales-order-items").attr('data-prototype');
@@ -51,5 +45,18 @@
         newOrderItem = newOrderItem.replace(/__id__/g, collectionHolder.children().length - 1);
         newOrderItem = newOrderItem.replace(/__position__/g, collectionHolder.children().length);
         $("#sylius-sales-order-items tbody tr:last").before(newOrderItem);
+    }
+    function addImageForm() {
+        var collectionHolder = $("#sylius_assortment_product_images");
+        var prototype = $(collectionHolder
+            .attr('data-prototype')
+            .replace(/__name__/g, collectionHolder.children().length)
+        );
+        prototype
+            .find('input')
+            .addClass('file-hide')
+            .after('<span class="btn large file-overlay">upload image</span>')
+        ;
+        collectionHolder.append(prototype.find('div.controls').html());
     }
 })( jQuery );

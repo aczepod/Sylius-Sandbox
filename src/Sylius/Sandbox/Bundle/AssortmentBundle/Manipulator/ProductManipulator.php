@@ -39,6 +39,11 @@ class ProductManipulator extends BaseProductManipulator
         parent::update($product);
     }
 
+    /**
+     * Triggers upload event for each product image.
+     *
+     * @param ProductInterface $product
+     */
     protected function triggerImageUpload(ProductInterface $product)
     {
         foreach ($product->getImages() as $image) {

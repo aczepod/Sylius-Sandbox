@@ -57,6 +57,10 @@
             .addClass('file-hide')
             .after('<span class="btn large file-overlay">upload image</span>')
         ;
-        collectionHolder.append(prototype.find('div.controls').html());
+        collectionHolder.append(prototype
+            .find('div.controls')
+            .removeClass('controls')
+            .addClass('product-image-added')
+        );
     }
 })( jQuery );

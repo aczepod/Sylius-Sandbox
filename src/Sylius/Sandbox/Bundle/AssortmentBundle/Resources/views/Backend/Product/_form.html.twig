@@ -15,19 +15,21 @@
             <hr />
             <div class="control-group">
                 {{ form_label(form.images) }}
-            </div>
-            <div class="controls">
-                {% if product.images|length > 0 %}
-                <div data-prototype="{{ form_widget(form.images.get('prototype'))|e }}" id="sylius_assortment_product_images">
-                    {% for image in product.images %}
-                        <img src="{{ image.webPath|apply_filter('frontend_medium') }}">
-                        {{ form_widget(form.images[loop.index0].image, {'attr': {'class': 'file-hide'}}) }}
-                        <span class="btn large file-overlay">upload image</span>
-                    {% endfor %}
+                <div class="controls">
+                    {% if product.images|length > 0 %}
+                    <div data-prototype="{{ form_widget(form.images.get('prototype'))|e }}" id="sylius_assortment_product_images">
+                        {% for image in product.images %}
+                            <div>
+                                <img src="{{ image.webPath|apply_filter('frontend_medium') }}">
+                                {{ form_widget(form.images[loop.index0].image, {'attr': {'class': 'file-hide'}}) }}
+                                <span class="btn large file-overlay">upload image</span>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                        {{ form_widget(form.images) }}
+                    {% endif %}
                 </div>
-                {% else %}
-                    {{ form_widget(form.images) }}
-                {% endif %}
             </div>
             <div class="control-group">
                 <div class="controls">

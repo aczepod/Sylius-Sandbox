@@ -14,6 +14,7 @@ namespace Sylius\Sandbox\Bundle\AssortmentBundle\Form\Type;
 use Sylius\Bundle\AssortmentBundle\Form\Type\CustomizableProductType as BaseCustomizableProductType;
 use Sylius\Sandbox\Bundle\AssortmentBundle\Entity\Product;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
  * Product form type.
@@ -42,6 +43,18 @@ class ProductType extends BaseCustomizableProductType
             ->add('variantPickingMode', 'choice', array(
                 'label'    => 'Variant picking mode',
                 'choices'  => Product::getVariantPickingModeChoices()
+            ))
+        ;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver
+            ->setDefaults(array(
+                'validation_groups'  => array('Sandbox'),
             ))
         ;
     }
